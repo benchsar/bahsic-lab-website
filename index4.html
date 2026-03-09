@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Équipe BAHSic U1134</title>
+    <meta name="description" content="Site de l'équipe BAHSic U1134">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css?v=7">
+
+    <!-- Polices -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Playfair+Display:wght@600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
+
+    <script defer src="assets/js/main.js"></script>
+  </head>
+  <script>
+(function(){
+  const root   = document.querySelector('[data-gallery]');
+  if(!root) return;
+
+  const track  = root.querySelector('[data-track]');
+  const slides = Array.from(track.children);
+  const prev   = root.querySelector('[data-prev]');
+  const next   = root.querySelector('[data-next]');
+  const dotsEl = root.parentElement.querySelector('[data-dots]');
+
+  let index = 0;
+
+  // Dots
+  slides.forEach((_, i) => {
+    const b = document.createElement('button');
+    b.className = 'g-dot';
+    b.type = 'button';
+    b.setAttribute('role','tab');
+    b.setAttribute('aria-label', `Photo ${i+1}`);
+    b.addEventListener('click', () => goTo(i));
+    dotsEl.appendChild(b);
+  });
+
+  function update(){
+    track.style.transform = `translateX(${-index * 100}%)`;
+    dotsEl.querySelectorAll('.g-dot').forEach((d,i) => {
+      d.setAttribute('aria-selected', i === index ? 'true' : 'false');
+    });
+  }
+
+  function goTo(i){
+    index = (i + slides.length) % slides.length;
+    update();
+  }
+
+  prev.addEventListener('click', () => goTo(index - 1));
+  next.addEventListener('click', () => goTo(index + 1));
+
+  // Clavier
+  root.addEventListener('keydown', (e) => {
+    if(e.key === 'ArrowLeft') goTo(index - 1);
+    if(e.key === 'ArrowRight') goTo(index + 1);
+  });
+  root.setAttribute('tabindex','0');
+
+  // Swipe mobile
+  let startX = null;
+  root.addEventListener('touchstart', e => startX = e.touches[0].clientX, {passive:true});
+  root.addEventListener('touchend', e => {
+    if(startX == null) return;
+    const dx = e.changedTouches[0].clientX - startX;
+    if(Math.abs(dx) > 40) goTo(index + (dx < 0 ? 1 : -1));
+    startX = null;
+  });
+
+  // Init
+  update();
+})();
+</script>
+
+  <body>
+    
+    <!-- En-tête -->
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <img src="assets/img/Inserm_rvb_noir.png" alt="Logo Inserm" style="height:80px;">
+        <nav class="nav" aria-label="Navigation principale">
+          <a href="index.html" aria-current="page">Home</a>
+          <a href="team.html">Team</a>
+          <a href="projects.html">Projects</a>
+          <a href="publications.html">Publications</a>
+          <a href="news.html">News</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Bandeau rouge Harvard-like -->
+    <section class="hero-colored">
+      <div class="container">
+        <h1 class="hero-title">BAHSic-U1134 Lab</h1>
+        <hr class="hero-rule">
+        <div class="hero-rows">
+          <p class="hero-desc">
+            Hematopoiesis & Translational Research: blood cell biology, multi-omic approaches, and translational studies.
+          </p>
+          <p class="hero-phone">Phone <br> 01 23 45 67 89 </br> </p>
+          <address class="hero-address">
+            Location <br> 149 rue de Sèvres — Hôpital Necker Enfants Malades, 75015 Paris</br>
+          </address>
+        </div>
+      </div>
+    </section>
+
+    <!-- Grande image sous le bandeau -->
+    <figure class="diag-photo">
+      <img src="assets/img/Laetitia.png" alt="Laboratoire d’hématologie">
+    </figure>
+
+    <!-- Contenu principal -->
+    <main id="main" role="main">
+
+      <!-- SECTION intro type Harvard : colonne gauche + grand titre -->
+      <section class="intro-section" aria-labelledby="intro-title">
+        <div class="container-two-cols">
+          <aside class="intro-left" aria-label="Sommaire de section">
+            <div class="intro-line" aria-hidden="true"></div>
+            <nav class="intro-nav">
+              <a href="index.html">Home</a>
+              <a href="team.html">Team</a>
+              <a href="projects.html">Field work & collaborations</a>
+            </nav>
+          </aside>
+
+          <div class="intro-right">
+            <h2 id="intro-title" class="intro-title">Sickle cell disease</h2>
+            <p class="intro-text">
+              <br>
+              We study sickle cell disease from the perspective of blood cell biology
+              and tissue-specific interactions. By combining functional genetics,
+              ex vivo cultures, and multi-omic analyses (single-cell, ATAC-seq, proteomics),
+              we aim to identify target mechanisms and accelerate translation
+              towards new therapeutic strategies.
+              </br>
+              <br>
+              We study sickle cell disease from the perspective of blood cell biology
+              and tissue-specific interactions. By combining functional genetics,
+              ex vivo cultures, and multi-omic analyses (single-cell, ATAC-seq, proteomics),
+              we aim to identify target mechanisms and accelerate translation
+              towards new therapeutic strategies.
+              </br>
+              <br>
+              We study sickle cell disease from the perspective of blood cell biology
+              and tissue-specific interactions. By combining functional genetics,
+              ex vivo cultures, and multi-omic analyses (single-cell, ATAC-seq, proteomics),
+              we aim to identify target mechanisms and accelerate translation
+              towards new therapeutic strategies.
+              </br>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Thématiques -->
+      <section id="themes" class="section">
+        <div class="container">
+          <h2>Research Themes</h2>
+
+          <div class="theme">
+            <img class="theme-img" src="assets/img/Laetitia.png" alt="Observation au microscope">
+            <div class="theme-text">
+              <h3 class="accent">NAANANANA des HSC</h3>
+              <p> 
+                <br>
+                  We study sickle cell disease from the perspective of blood cell biology
+                and tissue-specific interactions. By combining functional genetics,
+                ex vivo cultures, and multi-omic analyses (single-cell, ATAC-seq, proteomics),
+                we aim to identify target mechanisms and accelerate translation
+                towards new therapeutic strategies.
+                </br>
+                <br>
+                  We study sickle cell disease from the perspective of blood cell biology
+                and tissue-specific interactions. By combining functional genetics,
+                ex vivo cultures, and multi-omic analyses (single-cell, ATAC-seq, proteomics),
+                we aim to identify target mechanisms and accelerate translation
+                towards new therapeutic strategies.
+                </br>
+              </p>
+            </div>
+          </div>
+
+          <div class="theme">
+            <div class="theme-text">
+              <h3 class="accent">Culture & differentiation</h3>
+              <p> 
+                  <br>
+                    We study sickle cell disease from the perspective of blood cell biology
+                    and tissue-specific interactions. By combining functional genetics,
+                    ex vivo cultures, and multi-omic analyses (single-cell, ATAC-seq, proteomics),
+                    we aim to identify target mechanisms and accelerate translation
+                    towards new therapeutic strategies.
+                  </br>
+                  <br>
+                    We study sickle cell disease from the perspective of blood cell biology
+                    and tissue-specific interactions. By combining functional genetics,
+                    ex vivo cultures, and multi-omic analyses (single-cell, ATAC-seq, proteomics),
+                    we aim to identify target mechanisms and accelerate translation
+                    towards new therapeutic strategies.
+                  </br>
+              </p>
+            </div>
+            <img class="theme-img" src="assets/img/theme-culture.jpg" alt="Culture cellulaire">
+          </div>
+
+          <div class="theme">
+            <img class="theme-img" src="assets/img/Bioinfo.png" alt="Pipetage au laboratoire">
+            <div class="theme-text">
+              <h3 class="accent">Bioinformatics & data analysis</h3>
+              <p>
+                  <br>
+                    We study sickle cell disease from the perspective of blood cell biology
+                    and tissue-specific interactions. By combining functional genetics,
+                    ex vivo cultures, and multi-omic analyses (single-cell, ATAC-seq, proteomics),
+                    we aim to identify target mechanisms and accelerate translation
+                    towards new therapeutic strategies.
+                  </br>
+                  <br>
+                    We study sickle cell disease from the perspective of blood cell biology
+                    and tissue-specific interactions. By combining functional genetics,
+                    ex vivo cultures, and multi-omic analyses (single-cell, ATAC-seq, proteomics),
+                    we aim to identify target mechanisms and accelerate translation
+                    towards new therapeutic strategies.
+                  </br>                 
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+      <!-- ========================= -->
+<!-- Lab Photo Catalog / Gallery -->
+<!-- ========================= -->
+<section class="lab-gallery" aria-labelledby="gallery-title">
+  <div class="container">
+    <h2 id="gallery-title">Lab Photo Catalog</h2>
+
+    <div class="gallery" data-gallery>
+      <button class="g-btn g-prev" aria-label="Previous photo" data-prev>
+        &#10094;
+      </button>
+
+      <div class="g-viewport">
+        <ul class="g-track" data-track>
+          <!-- Slide 1 -->
+          <li class="g-slide is-active">
+            <figure class="g-figure">
+              <img
+                src="assets/img/Sara_Bioinfo.png"
+                alt="Sara analysant des données single-cell sur ordinateur"
+                class="g-img"
+                loading="lazy"
+              >
+              <figcaption class="g-caption">
+                <span class="g-title">Sara</span> en train d’analyser des données <em>single-cell</em> (scRNA-seq).
+                <span class="g-credit">— Crédit photo : Labo BAHSic</span>
+              </figcaption>
+            </figure>
+          </li>
+        <!-- Slide 3 -->
+          <li class="g-slide">
+            <figure class="g-figure">
+              <img
+                src="assets/img/gallery/Laetitia"
+                alt="Laetitia en train de ...."
+                class="g-img"
+                loading="lazy"
+              >
+              <figcaption class="g-caption">
+                Culture de cellules & pipetage en conditions stériles.
+                <span class="g-credit">— Crédit photo : BAHSic team</span>
+              </figcaption>
+            </figure>
+          </li>
+        </ul>
+      </div>
+
+      <button class="g-btn g-next" aria-label="Next photo" data-next>
+        &#10095;
+      </button>
+    </div>
+
+    <div class="g-dots" role="tablist" aria-label="Choisir une photo" data-dots></div>
+  </div>
+</section>
+
+    </main>
+    
+    <footer class="site-footer">
+      <div class="container">
+        <p>© 2025 Inserm — BAHSic-U1134 Lab</p>
+      </div>
+    </footer>
+
+  </body>
+</html>

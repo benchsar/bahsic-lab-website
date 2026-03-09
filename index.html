@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Équipe BaHSic U1134</title>
+    <meta name="description" content="Site de l'équipe BAHSic U1134">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css?v=8">
+
+    <!-- Polices -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Playfair+Display:wght@600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <!-- ========== Header (logo + nav) ========== -->
+    <header class="site-header" role="banner">
+      <div class="container nav-wrap">
+        <a href="index.html" class="brand-logo" aria-label="Inserm — retour à l’accueil">
+          <img src="assets/img/Inserm_rvb_noir.png" alt="Logo Inserm" style="height:80px;">
+          <img src="assets/img/bahsic-logo.png" alt="Logo BaHSic" style="height:90px;">
+        </a>
+
+        <nav class="nav" aria-label="Navigation principale">
+          <a href="index.html" aria-current="page">Home</a>
+          <a href="publications.html">Publications</a>
+          <a href="news.html">News</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ========== Bandeau rouge (hero) ========== -->
+    <section class="hero-colored">
+        <!-- 🎥 Vidéo de fond -->
+     <video autoplay muted loop playsinline class="hero-bg-video" aria-hidden="true">
+        <source src="assets/video/red-blood-cells-lld.mp4" type="video/mp4">
+      </video>
+      <!--<div class="hero-overlay"></div>-->
+      <div class="container hero-container">
+        <h1 class="hero-title">BaHSic Lab</h1>
+        <hr class="hero-rule">
+
+        <div class="hero-rows" role="group" aria-label="Présentation et coordonnées">
+          <p class="hero-desc">
+            Hematopoiesis & Translational Research: blood cell biology, multi-omic approaches, and translational studies.
+          </p>
+
+          <p class="hero-phone">
+            <span class="hero-label"> Phone</span>
+            <span class="hero-value">01 23 45 67 89</span>
+          </p>
+
+          <address class="hero-address">
+            <span class="hero-label">Location</span>
+            <span class="hero-value">149 rue de Sèvres — Hôpital Necker Enfants Malades, 75015 Paris</span>
+          </address>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Grande image sous bandeau ========== -->
+    <figure class="diag-photo">
+      <img src="assets/img/Laetitia.png" alt="Laboratoire d’hématologie">
+    </figure>
+
+    <!-- ========== Contenu principal ========== -->
+    <main id="main" role="main">
+
+      <!-- ===== Intro (menu latéral + texte) ===== -->
+      <section class="intro-section" aria-labelledby="intro-title">
+        <div class="container-two-cols">
+          <!-- Menu latéral gauche -->
+          <aside class="intro-left" aria-label="Sommaire de section">
+            <div class="intro-line" aria-hidden="true"></div>
+            <nav class="intro-nav">
+              <a href="index.html" aria-current="page">Home</a>
+              <a href="team.html">Team</a>
+              <a href="projects.html">Field work &amp; collaborations</a>
+            </nav>
+          </aside>
+
+          <!-- Texte principal + jumpbar -->
+          <div class="intro-right">
+            <h2 id="intro-title" class="intro-title">Blood Cell Biology, Inflammation & Hematopoiesis</h2>
+            <p class="intro-text">
+             Our team investigates the biology of blood group antigens and the pathophysiology of sickle cell disease, with a particular focus on hematopoiesis and inflammatory anemia. By studying how blood cells develop and function under both physiological and pathological conditions, we aim to better understand the mechanisms that drive anemia and chronic inflammation.
+            </p>
+            <p class="intro-text">
+              Our research seeks to identify key molecules and signaling pathways that contribute to disease progression. We have shown that the genetic and cellular determinants of blood phenotypes provide essential insights into protein function and disease mechanisms, highlighting how variations in blood group antigens can influence biological processes and clinical outcomes.
+            </p>
+            <p class="intro-text">
+              In addition, we explore how chronic inflammation contributes to both acute and long-term complications of sickle cell disease, including vaso-occlusive crises and splenic dysfunction. Our work also investigates the role of metabolite transporters in regulating blood cell development and in promoting fetal hemoglobin activation, a key therapeutic target for improving disease outcomes.
+
+            </p>
+
+            <!-- Jump to section (pliable) -->
+            <nav class="jumpbar jumpbar-collapsible" aria-label="Jump to Section">
+              <button class="jumpbar-toggle" type="button" aria-expanded="false" aria-controls="jumpbar-links">
+                <span class="jumpbar-label">Jump to section</span>
+                <span class="jumpbar-caret" aria-hidden="true"></span>
+              </button>
+
+              <div id="jumpbar-links" class="jumpbar-links" hidden>
+                <a class="jump-link" href="#themes">Research Themes</a>
+                <a class="jump-link" href="#gallery">Lab Photo Catalog</a>
+                <a class="jump-link" href="#projects">Our Research Projects</a>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Thématiques ===== -->
+      <section id="themes" class="section">
+        <div class="circle-extra left"></div>
+        <div class="circle-extra right"></div>
+        <div class="container">
+          <h2>Research Themes</h2>
+
+          <div class="theme">
+            <img class="theme-img" src="assets/img/hemato.jpeg" alt="Observation au microscope">
+            <div class="theme-text">
+              <h3 class="research-title">Hematopoiesis &amp; Inflammatory 
+                <br>Anemia</br>
+              </h3>
+              <p>
+                Our research investigates how hematopoiesis and erythropoiesis are regulated under inflammatory conditions, with a particular focus on sickle cell disease. We study how inflammation, genetic variation, and metabolic pathways influence hematopoietic stem and progenitor cell commitment and erythroid maturation. Special attention is given to early life stages, where hematopoietic dysfunction and impaired maturation can shape disease trajectory in infants with sickle cell disease. By identifying molecular regulators of erythropoiesis and fetal hemoglobin induction, our work aims to uncover new mechanisms that could improve red blood cell production and ameliorate anemia.
+              </p>
+            </div>
+          </div>
+
+          <div class="theme">
+            <div class="theme-text">
+              <h3 class="research-title">Inflammation &amp; Vascular 
+                <br> Complications</br>
+              </h3>
+              <p> 
+                Chronic inflammation plays a central role in the pathophysiology of sickle cell disease and its systemic complications. Our work focuses on the cellular and molecular mechanisms that promote vaso-occlusion, endothelial activation, and tissue damage. We investigate how inflammatory cells, cytokine signaling, and red blood cell alterations contribute to vascular obstruction and chronic complications such as leg ulcers. In parallel, we explore how spleen dysfunction emerges at the crossroads of immune dysregulation, abnormal red cell retention, and alloimmunization, providing new insights into the role of the spleen in disease progression.
+              </p>
+            </div>
+            <img class="theme-img" src="assets/img/theme-culture.jpg" alt="Culture cellulaire">
+          </div>
+
+          <div class="theme">
+            <img class="theme-img" src="assets/img/globule_rouge.jpeg" alt="Analyse de données bioinformatiques">
+            <div class="theme-text">
+              <h3 class="research-title">Blood Group Antigens &amp; Transfusion <br> Safety</br> </h3>
+              <p>
+                Another major focus of our research is the molecular diversity and functional biology of blood group antigens. We investigate the genetic polymorphisms underlying blood group variation and their impact on protein function, red blood cell physiology, and immune recognition. Understanding these mechanisms is particularly important in patients requiring chronic transfusion therapy, such as those with sickle cell disease. By combining genomic approaches with immunohematology, our work aims to improve transfusion compatibility, identify rare blood phenotypes, and enhance transfusion safety for patients at risk of alloimmunization.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Galerie photos du labo ===== -->
+      <section id="gallery" class="lab-gallery" aria-labelledby="gallery-title">
+        <div class="container">
+          <h2 id="gallery-title">Lab Photo Catalog</h2>
+
+          <div class="gallery" data-gallery>
+            <button class="g-btn g-prev" aria-label="Previous photo" data-prev>&#10094;</button>
+
+            <div class="g-viewport">
+              <ul class="g-track" data-track>
+                <li class="g-slide is-active">
+                  <figure class="g-figure">
+                    <img src="assets/img/Sara_Bioinfo.png" alt="Sara analyzing single-cell data" class="g-img" loading="lazy">
+                    <figcaption class="g-caption">
+                      <span class="g-title">Sara</span> analyzing <em>single-cell</em> data (scRNA-seq).
+                    </figcaption>
+                  </figure>
+                </li>
+
+                <li class="g-slide">
+                  <figure class="g-figure">
+                    <img src="assets/img/Laetitia.png" alt="Laetitia working in the laboratory" class="g-img" loading="lazy">
+                    <figcaption class="g-caption">
+                      <span class="g-title">Laetitia</span> performs <em>cell culture</em>.
+                    </figcaption>
+                  </figure>
+                </li>
+              </ul>
+            </div>
+
+            <button class="g-btn g-next" aria-label="Next photo" data-next>&#10095;</button>
+          </div>
+
+          <div class="g-dots" role="tablist" aria-label="Choisir une photo" data-dots></div>
+        </div>
+      </section>
+
+<!-- ===== Our Research Projects ===== -->
+<section id="projects" class="projects section projects--bleed projects--pyramid" aria-labelledby="projects-title">
+  <div class="projects-wrap">
+    <!-- Bande image à gauche, découpe diagonale -->
+    <figure class="projects-photo">
+      <img src="assets/img/theme-culture.jpg" alt="Culture plates in the lab">
+    </figure>
+
+    <!-- Colonne texte à droite -->
+    <div class="projects-text">
+      <h2 id="projects-title">Our Research Projects</h2>
+
+      <article class="project-item">
+        <h3 class="project-title">Metabolic Control of Erythropoiesis</h3>
+        <p>
+         This project explores how metabolic pathways regulate erythroid differentiation and fetal hemoglobin induction. By combining functional genomics and multi-omics approaches, we aim to identify key regulators of red blood cell development and potential therapeutic targets for anemia.
+        </p>
+      </article>
+
+      <article class="project-item">
+        <h3 class="project-title"> Inflammation &amp; Vaso-Occlusion</h3>
+        <p>
+          We investigate how inflammatory cells, cytokines, and endothelial activation contribute to vaso-occlusive events in sickle cell disease. This project aims to better understand the mechanisms driving vascular obstruction and chronic complications.
+        </p>
+      </article>
+
+      <article class="project-item">
+        <h3 class="project-title"> Spleen Dysfunction in SCD </h3>
+        <p>
+         This project examines how spleen dysfunction affects immune regulation, red blood cell retention, and alloimmunization in patients with sickle cell disease, providing new insights into disease progression.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+<section class="marquee">
+  <div class="marquee-content">
+    <span>🩸 Red blood cells</span>
+    <span>🔥 Inflammation</span>
+    <span>🧬 Blood group antigens</span>
+    <span>🧫 Sickle Cell Disease</span>
+    <span>🌱 Hematopoiesis</span>
+    <span>🛡️ Spleen</span>
+    <span> Alloimmunization</span>
+    <span>🧬🔬 CRISPR-Cas9 • scRNA-seq • Proteomics • Microfluidics • Amnis • Rheology • ATAC-seq</span>
+    <span>🧫 Erythroid cell lines</span>
+    <span>🧪 Immunohematology</span>
+  </div>
+</section>
+
+<!-- ===== Footer band (liens + réseaux) ===== -->
+<section class="footer-band" aria-label="Useful links & social">
+  <div class="container fb-wrap">
+    <!-- Colonne gauche : logo + liens (tu peux en ajouter/retirer) -->
+    <div class="fb-left">
+      <div class="fb-brand">
+        <!-- Si ton logo est foncé, garde la classe .logo-white pour l'inverser -->
+        <img src="assets/img/Inserm_rvb_noir.png" alt="Inserm" class="logo-white" style="height:90px">
+        <img src="assets/img/bahsic-logo.png" alt="BaHSic" class="logo-white" style="height:90px">
+        <img src="assets/img/université-pc.png" alt="upc" style="height:50px">
+        <img src="assets/img/Logo_EFS.png" alt="EFS" style="height:90px">
+        <img src="assets/img/u_antilles.png" alt="U_Antilles" style="height:90px">
+      </div>
+
+      <ul class="fb-links">
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <div class="fb-address">
+        149 rue de Sèvres — Hôpital Necker Enfants Malades, 75015 Paris
+      </div>
+    </div>
+
+    <!-- Colonne droite : encart + réseaux -->
+    <div class="fb-right">
+      <div class="fb-card">
+        <h3 class="fb-card-title">Stay in touch</h3>
+        <p class="fb-card-text">
+          Follow the lab and receive updates on research, publications and events.
+        </p>
+        <a class="button fb-card-btn" href="#" role="button">Subscribe</a>
+        <span class="fb-card-underline" aria-hidden="true"></span>
+      </div>
+
+      <div class="fb-social" aria-label="Social networks">
+        <!-- Remplace les href par tes vraies URLs -->
+        <a class="si" href="https://www.linkedin.com/" aria-label="LinkedIn" target="_blank" rel="noopener">
+          <!-- LinkedIn -->
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5.001 2.5 2.5 0 0 1 0-5zM3 8.982h3.96V21H3zM9.78 8.982H13.6v1.64h.06c.53-.95 1.82-1.95 3.74-1.95 4 0 4.74 2.63 4.74 6.05V21H18.2v-4.93c0-1.18-.02-2.69-1.64-2.69-1.64 0-1.89 1.28-1.89 2.6V21H9.78z"/></svg>
+        </a>
+        <a class="si" href="https://twitter.com/" aria-label="X / Twitter" target="_blank" rel="noopener">
+          <!-- X / Twitter -->
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 2H22l-7.7 8.8L23.5 22h-6.3l-5-6.4-5.7 6.4H2.4l8.4-9.5L.7 2h6.5l4.6 5.9L18.9 2z"/></svg>
+        </a>
+        <a class="si" href="https://www.youtube.com/" aria-label="YouTube" target="_blank" rel="noopener">
+          <!-- YouTube -->
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19 3.5 12 3.5 12 3.5s-7 0-9.4.6A3 3 0 0 0 .5 6.2 31.2 31.2 0 0 0 0 12a31.2 31.2 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c2.4.6 9.4.6 9.4.6s7 0 9.4-.6a3 3 0 0 0 2.1-2.1c.4-1.9.5-3.8.5-5.8s0-3.9-.5-5.8zM9.6 15.5V8.6l6.2 3.5-6.2 3.4z"/></svg>
+        </a>
+        <a class="si" href="https://github.com/" aria-label="GitHub" target="_blank" rel="noopener">
+          <!-- GitHub -->
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.4-4-1.4-.6-1.3-1.4-1.7-1.4-1.7-1.1-.8.1-.8.1-.8 1.2.1 1.9 1.2 1.9 1.2 1.1 1.9 2.9 1.3 3.6 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.6-1.3-5.6-6a4.7 4.7 0 0 1 1.2-3.2 4.3 4.3 0 0 1 .1-3.1s1-.3 3.3 1.2a11.3 11.3 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2a4.3 4.3 0 0 1 .1 3.1 4.7 4.7 0 0 1 1.2 3.2c0 4.7-2.9 5.7-5.6 6 .4.3.8 1 .8 2v3c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"/></svg>
+        </a>
+        <a class="si" href="https://instagram.com/" aria-label="Instagram" target="_blank" rel="noopener">
+          <!-- Instagram -->
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2 0 2 .2 2.5.4.6.2 1 .5 1.4 1 .4.4.7.8 1 1.4.2.4.4 1.3.4 2.5.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c0 1.2-.2 2-.4 2.5-.2.6-.5 1-1 1.4-.4.4-.8.7-1.4 1-.4.2-1.3.4-2.5.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2 0-2-.2-2.5-.4-.6-.2-1-.5-1.4-1-.4-.4-.7-.8-1-1.4-.2-.4-.4-1.3-.4-2.5C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c0-1.2.2-2 .4-2.5.2-.6.5-1 1-1.4.4-.4.8-.7 1.4-1 .4-.2 1.3-.4 2.5-.4C8.4 2.2 8.8 2.2 12 2.2m0-2.2C8.7 0 8.3 0 7 0 5.7 0 4.8.2 4.1.4 3.3.7 2.7 1 2 1.7 1.3 2.4 1 3  .7 3.8.5 4.5.3 5.4.3 6.7 0 8 0 8.4 0 12s0 3.6.3 4.9c0 1.3.2 2.2.4 2.9.3.8.6 1.4 1.3 2.1.7.7 1.3 1 2.1 1.3.7.2 1.6.4 2.9.4 1.3.1 1.7.1 4.9.1s3.6 0 4.9-.1c1.3 0 2.2-.2 2.9-.4.8-.3 1.4-.6 2.1-1.3.7-.7 1-1.3 1.3-2.1.2-.7.4-1.6.4-2.9.1-1.3.1-1.7.1-4.9s0-3.6-.1-4.9c0-1.3-.2-2.2-.4-2.9-.3-.8-.6-1.4-1.3-2.1C21.3 1 20.7.7 19.9.4 19.2.2 18.3 0 17 0c-1.3 0-1.7 0-4.9 0Z"/><circle cx="12" cy="12" r="3.2"/></svg>
+        </a>
+      </div>
+  </div>
+</section>
+
+    <!-- ========== Footer ========== -->
+    <footer class="site-footer" role="contentinfo">
+      <div class="container">
+        <p>© 2025 Inserm — BAHSic-U1134 Lab</p>
+        <p>Under development</p>
+      </div>
+    </footer>
+
+    <!-- ========== JS Galerie + Jumpbar ========== -->
+    <script>
+      /* === Galerie === */
+      (function(){
+        const root = document.querySelector('[data-gallery]');
+        if(!root) return;
+
+        const track  = root.querySelector('[data-track]');
+        const slides = Array.from(track.children);
+        const prev   = root.querySelector('[data-prev]');
+        const next   = root.querySelector('[data-next]');
+        const dotsEl = root.parentElement.querySelector('[data-dots]');
+        let index = 0;
+
+        slides.forEach((_, i) => {
+          const b = document.createElement('button');
+          b.className = 'g-dot';
+          b.type = 'button';
+          b.setAttribute('role','tab');
+          b.setAttribute('aria-label', `Photo ${i+1}`);
+          b.addEventListener('click', () => goTo(i));
+          dotsEl.appendChild(b);
+        });
+
+        function update(){
+          track.style.transform = `translateX(${-index * 100}%)`;
+          dotsEl.querySelectorAll('.g-dot').forEach((d,i) =>
+            d.setAttribute('aria-selected', i === index ? 'true' : 'false'));
+        }
+
+        function goTo(i){ index = (i + slides.length) % slides.length; update(); }
+
+        prev.addEventListener('click', () => goTo(index - 1));
+        next.addEventListener('click', () => goTo(index + 1));
+
+        root.addEventListener('keydown', e => {
+          if(e.key === 'ArrowLeft') goTo(index - 1);
+          if(e.key === 'ArrowRight') goTo(index + 1);
+        });
+        root.setAttribute('tabindex','0');
+
+        let startX = null;
+        root.addEventListener('touchstart', e => startX = e.touches[0].clientX, {passive:true});
+        root.addEventListener('touchend', e => {
+          if(startX == null) return;
+          const dx = e.changedTouches[0].clientX - startX;
+          if(Math.abs(dx) > 40) goTo(index + (dx < 0 ? 1 : -1));
+          startX = null;
+        });
+
+        update();
+      })();
+
+      /* === Jump to section pliable === */
+      (function(){
+        const bar = document.querySelector('.jumpbar-collapsible');
+        if(!bar) return;
+
+        const btn   = bar.querySelector('.jumpbar-toggle');
+        const panel = bar.querySelector('#jumpbar-links');
+
+        function setOpen(open){
+          btn.setAttribute('aria-expanded', open);
+          bar.setAttribute('aria-expanded', open);
+          panel.hidden = !open;
+        }
+
+        btn.addEventListener('click', () => {
+          const open = btn.getAttribute('aria-expanded') === 'true';
+          setOpen(!open);
+        });
+
+        document.addEventListener('click', (e) => {
+          if (!bar.contains(e.target)) setOpen(false);
+        });
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') setOpen(false);
+        });
+
+        document.querySelectorAll('.jumpbar-links a').forEach(a=>{
+          a.addEventListener('click', () => setOpen(false));
+        });
+      })();
+    </script>
+  </body>
+</html>

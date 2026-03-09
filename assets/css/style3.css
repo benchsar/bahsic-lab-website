@@ -1,0 +1,181 @@
+/* ========== Palette & typos ========== */
+:root{
+  --brand:#a30000;            /* Rouge Inserm */
+  --ink:#0f2630;
+  --muted:#5b6b75;
+  --paper:#ffffff;
+  --bg:#ffffff;
+  --text:#1f2937;
+  --border:#e5e7eb;
+
+  --hero-overlap:120px;
+  --photo-height: clamp(480px, 40vw, 820px);
+
+  --font-body:'Inter', system-ui, -apple-system, sans-serif;
+  --font-title:'Cormorant Garamond', serif;
+
+  --h2: clamp(2.2rem, 3.5vw, 3.2rem);
+}
+
+/* ========== Base ========== */
+*{ box-sizing:border-box; }
+html,body{ margin:0; padding:0; background:var(--bg); color:var(--text); }
+body{ font-family:var(--font-body); line-height:1.65; font-size:1.05rem; }
+a{ color:var(--brand); text-decoration:none; }
+a:hover{ text-decoration:underline; }
+.container{ max-width:1100px; padding:1rem; margin:0 auto; }
+
+h1,h2,h3{ font-family:var(--font-title); color:var(--ink); margin:0 0 1rem; }
+h2{ font-size:var(--h2); }
+h3{ font-size:1.35rem; }
+
+/* ========== Topbar jaune ========== */
+.topbar-search{
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background:#fdeee1;
+  border-bottom:1px solid rgba(0,0,0,.08);
+}
+.topbar-search .container{
+  display:flex; justify-content:center; align-items:center; padding:.65rem 1rem;
+}
+.search-form{ display:flex; gap:.5rem; width:min(680px,100%); }
+.search-form input[type="search"]{
+  flex:1; padding:.6rem 1rem; border:1px solid rgba(0,0,0,.15);
+  border-radius:999px; outline:none; font-size:1rem;
+}
+.search-form button{
+  padding:.6rem .9rem; border:none; border-radius:999px;
+  background:#5b3c11; color:#fff; font-weight:600; cursor:pointer;
+}
+.search-form button:hover{ filter:brightness(1.1); }
+
+/* ========== Hero (bandeau rouge) ========== */
+.hero-colored{
+  position:relative;
+  background:var(--brand);
+  color:#fff;
+  padding:3.5rem 0 7.5rem;
+}
+
+/* Ligne logo + menu */
+.hero-topbar{
+  display:flex; justify-content:space-between; align-items:center;
+  max-width:1200px; margin:0 auto 1rem auto; padding:0 2rem;
+}
+.hero-logo{
+  width:180px; height:auto; filter:brightness(0) invert(1);
+}
+.hero-nav{ display:flex; gap:1.25rem; flex-wrap:wrap; justify-content:flex-end; }
+.hero-nav a{ color:#fff; text-decoration:none; font-weight:600; opacity:.95; }
+.hero-nav a:hover{ text-decoration:underline; }
+
+/* Titre + règle */
+.hero-title{
+  margin:0 0 .4rem 2rem;   /* aligné visuellement au logo */
+  font-family:var(--font-title);
+  font-size:clamp(2.6rem, 5.5vw, 3.8rem);
+  line-height:1.05;
+  letter-spacing:.3px;
+  background:linear-gradient(90deg,#ffb3b3 0%,#ffffff 45%,#ffb3b3 100%);
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+}
+.hero-rule{
+  border:0; border-top:8px solid rgba(255,255,255,.65);
+  max-width:1200px; width:calc(100% - 4rem);  /* marge latérale 2rem */
+  margin:.4rem auto 1.1rem auto;
+}
+
+/* Description / Phone / Location alignés */
+.hero-rows{
+  display:grid; grid-template-columns:2fr 1fr 1.4fr;
+  gap:1.25rem 1.5rem;
+  max-width:1200px; margin:0 auto; padding:0 2rem;
+}
+.hero-desc{ margin:0; max-width:60ch; opacity:.95; }
+.hero-phone{ margin:0; justify-self:center; font-weight:600; }
+.hero-address{ margin:0; text-align:right; justify-self:end; max-width:34ch; }
+
+/* ========== Grande image sous le hero ========== */
+.diag-photo{ width:100vw; margin:calc(-1 * var(--hero-overlap)) auto 0; line-height:0; }
+.diag-photo img{
+  display:block; width:100%; height:var(--photo-height);
+  object-fit:cover; object-position:left center;
+}
+
+/* ========== SECTION INTRO (menu gauche + texte) ========== */
+.intro-section{ padding:4rem 0; background:var(--paper); }
+.container-two-cols{
+  display:grid; grid-template-columns:240px 1fr; gap:3rem;
+  max-width:1100px; margin:0 auto; position:relative;
+}
+.container-two-cols::before{
+  content:""; position:absolute; left:300px; top:0; bottom:0;
+  width:2px; background:var(--brand); opacity:.6;
+}
+.intro-left{ display:flex; gap:12px; align-items:flex-start; padding-right:1rem; }
+.intro-line{ width:4px; height:28px; background:var(--brand); margin-top:4px; }
+.intro-nav{ display:flex; flex-direction:column; gap:.35rem; }
+.intro-nav a{ color:var(--ink); font-weight:600; white-space:nowrap; }
+
+.intro-right{ padding-left:4rem; }
+.intro-title{ margin:0 0 1rem; font-size:var(--h2); }
+.intro-text{ max-width:70ch; font-size:1.15rem; line-height:1.8; color:var(--muted); text-align:justify; }
+
+/* ========== Thématiques ========== */
+.theme{
+  display:grid; grid-template-columns:1.1fr 1fr; gap:2rem;
+  align-items:center; margin:2.5rem 0;
+}
+.theme:nth-child(even){ grid-template-columns:1fr 1.1fr; }
+.theme-img{
+  width:100%; height:320px; object-fit:cover;
+  clip-path:polygon(0 0,100% 8%,100% 100%,0 100%);
+}
+.theme-text .accent{ color:var(--brand); }
+
+/* ========== Footer ========== */
+.site-footer{ margin-top:3rem; border-top:1px solid var(--border); background:#fff; }
+.site-footer .container{ text-align:center; padding:1rem 0; }
+
+/* ========== Responsive ========== */
+@media (max-width:980px){
+  .hero-topbar{ flex-direction:column; align-items:flex-start; padding:0 1rem; }
+  .hero-title{ margin-left:1rem; }
+  .hero-rule{ width:calc(100% - 2rem); }
+  .hero-rows{ grid-template-columns:1fr; padding:0 1rem; }
+  .diag-photo img{ height:320px; object-position:center; }
+  .container-two-cols{ grid-template-columns:1fr; gap:2rem; }
+  .container-two-cols::before{ display:none; }
+  .intro-right{ padding-left:0; }
+  .theme{ grid-template-columns:1fr; }
+  .theme-img{ height:240px; }
+}
+
+@media (max-width:640px){
+  .hero-logo{ width:150px; }
+  .hero-nav{ gap:.9rem; }
+}
+
+/* --- Centrage du titre et de la ligne comme Harvard --- */
+.hero-title {
+  margin: 0 auto .4rem auto;   /* centré horizontalement */
+  text-align: center;
+  font-family: var(--font-title);
+  font-size: clamp(2.6rem, 5.5vw, 3.8rem);
+  line-height: 1.05;
+  letter-spacing: .3px;
+  background: linear-gradient(90deg, #ffb3b3 0%, #ffffff 45%, #ffb3b3 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-rule {
+  border: 0;
+  border-top: 8px solid rgba(255,255,255,.65);
+  max-width: 760px;              /* ligne plus courte au centre */
+  width: 90%;
+  margin: .4rem auto 1.1rem auto; /* centrée */
+}
