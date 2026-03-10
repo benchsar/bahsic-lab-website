@@ -57,9 +57,18 @@
     </section>
 
     <!-- Grande photo d’équipe -->
-    <figure class="diag-photo diag-photo-team">
-      <img src="assets/img/bahsic_team.jpg" alt="BAHSic U1134 team group photo" />
-    </figure>
+   <figure class="diag-photo diag-photo-team team-photo-slider" aria-label="BAHSic U1134 team photos">
+      <img
+      src="assets/img/bahsic_team.jpg"
+      alt="BAHSic U1134 team group photo 1"
+      class="team-slide is-active"
+       />
+      <img
+    src="assets/img/UMR1134_guadeloupe.jpg"
+    alt="BAHSic U1134 team group photo 2"
+    class="team-slide"
+  />
+</figure>
 
     <!-- Menu latéral identique à la home -->
     <section class="intro-section" aria-labelledby="team-intro">
@@ -239,7 +248,7 @@
         </article>
 
         <article class="person" aria-labelledby="p-sara">
-          <img src="assets/img/moi.png" alt="Portrait of Sara Bencheikh" loading="lazy" />
+          <img src="assets/img/Sara.png" alt="Portrait of Sara Bencheikh" loading="lazy" />
           <h3 id="p-sara">Sara Bencheikh</h3>
           <p class="role">Engineer, Inserm</p>
             <div class="leader-social" aria-label="LinkedIn profile">
@@ -556,6 +565,24 @@
         document.querySelectorAll('.jumpbar-links a').forEach(a=>{
           a.addEventListener('click', () => setOpen(false));
         });
+      })();
+
+      /* === Team photo slider === */
+      (function(){
+        const slider = document.querySelector('.team-photo-slider');
+        if(!slider) return;
+
+        const slides = slider.querySelectorAll('.team-slide');
+        if(slides.length < 2) return;
+
+        let current = 0;
+        const intervalMs = 5000; // mets 10000 pour 10 secondes
+
+        setInterval(() => {
+          slides[current].classList.remove('is-active');
+          current = (current + 1) % slides.length;
+          slides[current].classList.add('is-active');
+        }, intervalMs);
       })();
     </script>
   </body>

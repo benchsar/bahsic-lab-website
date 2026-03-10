@@ -396,6 +396,24 @@
           a.addEventListener('click', () => setOpen(false));
         });
       })();
+
+      /* === Team photo slider === */
+      (function(){
+        const slider = document.querySelector('.team-photo-slider');
+        if(!slider) return;
+
+        const slides = slider.querySelectorAll('.team-slide');
+        if(slides.length < 2) return;
+
+        let current = 0;
+        const intervalMs = 5000; // mets 10000 pour 10 secondes
+
+        setInterval(() => {
+          slides[current].classList.remove('is-active');
+          current = (current + 1) % slides.length;
+          slides[current].classList.add('is-active');
+        }, intervalMs);
+      })();
     </script>
   </body>
 </html>

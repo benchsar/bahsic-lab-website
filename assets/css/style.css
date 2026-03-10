@@ -1476,3 +1476,25 @@ h3{ font-size:var(--font-size-h3); }
   gap:30px;
   align-items:center;   /* ← centre verticalement */
 }
+
+/* ===== Team photo slider ===== */
+.team-photo-slider{
+  position: relative;
+  overflow: hidden;
+  min-height: 520px; /* ajuste si besoin */
+}
+
+.team-photo-slider .team-slide{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.team-photo-slider .team-slide.is-active{
+  opacity: 1;
+  z-index: 1;
+}
