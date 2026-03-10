@@ -1359,6 +1359,7 @@ h3{ font-size:var(--font-size-h3); }
   line-height: 1.2;
 }
 
+
 .research-title{
   text-align: center;
   font-family: "Cormorant Garamond", serif;
@@ -1497,4 +1498,14 @@ h3{ font-size:var(--font-size-h3); }
 .team-photo-slider .team-slide.is-active{
   opacity: 1;
   z-index: 1;
+}
+
+.research-title{
+  display: table;
+  margin: 0 auto 20px auto;
+  text-align: center;
+  font-family: "Cormorant Garamond", serif;
+  color: #b91c1c;
+  font-size: 2.6rem;
+  line-height: 1.2;
 }
