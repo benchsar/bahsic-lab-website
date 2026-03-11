@@ -78,7 +78,8 @@ h3{ font-size:var(--font-size-h3); }
 .site-header{
   background:#fff;
   border-bottom:1px solid var(--border);
-  position:sticky; top:0; z-index:50;
+  position:relative;
+  z-index:50;
 }
 .nav-wrap{
   display:flex; align-items:center; justify-content:space-between; gap:1rem;
@@ -822,13 +823,40 @@ h3{ font-size:var(--font-size-h3); }
 }
 
 /* règle l’espacement vertical entre les items (à ajuster si besoin) */
-.intro-left{ --row: 2.2rem; }
+.intro-line{
+  position:absolute;
+  left:-12px;
+  width:4px;
+  height:1.4em;
+  background:var(--brand);
+  border-radius:2px;
+  transition:transform .25s ease;
+}
 
-/* la barre se place selon le lien actif (1er, 2e, 3e) */
-.intro-left:has(.intro-nav a:nth-child(1)[aria-current="page"]) .intro-line{ transform: translateY(calc(0 * var(--row))); }
-.intro-left:has(.intro-nav a:nth-child(2)[aria-current="page"]) .intro-line{ transform: translateY(calc(1 * var(--row))); }
-.intro-left:has(.intro-nav a:nth-child(3)[aria-current="page"]) .intro-line{ transform: translateY(calc(2 * var(--row))); }
+/* position exacte pour chaque page */
+.intro-left:has(.intro-nav a[href="index.html"][aria-current="page"]) .intro-line{
+  top: 0.2em;
+}
 
+.intro-left:has(.intro-nav a[href="team.html"][aria-current="page"]) .intro-line{
+  top: 2.4em;
+}
+
+.intro-left:has(.intro-nav a[href="projects.html"][aria-current="page"]) .intro-line{
+  top: 4.8em;
+}
+
+.intro-left:has(.intro-nav a[href="publications.html"][aria-current="page"]) .intro-line{
+  top: 7.6em;
+}
+
+.intro-left:has(.intro-nav a[href="news.html"][aria-current="page"]) .intro-line{
+  top: 10em;
+}
+
+.intro-left:has(.intro-nav a[href="contact.html"][aria-current="page"]) .intro-line{
+  top: 12.4em;
+}
 /* --- HERO labels en "titre" + gras (sans changer le HTML) --- */
 .hero-rows{
   display: grid;
@@ -1509,3 +1537,311 @@ h3{ font-size:var(--font-size-h3); }
   font-size: 2.6rem;
   line-height: 1.2;
 }
+
+.nav-wrap{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.site-header .brand-logo{
+  margin-right: 0;
+}
+
+.intro-nav{
+  display:flex;
+  flex-direction:column;
+  gap:.55rem;
+}
+
+.intro-left{
+  align-items:flex-start;
+}
+
+.intro-left{
+  --row: 2.55rem;
+}
+
+.logo-paris-cite{
+  position: relative;
+  top: -22px;   /* remonte légèrement */
+}
+
+.logo-paris-cite{
+  height: 40px;
+  width: auto;
+}
+
+.nav-wrap{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:50px;
+  padding:10px 0;
+}
+
+
+/* =========================================
+   MOBILE FIXES
+   ========================================= */
+
+@media screen and (max-width: 768px){
+
+  html, body{
+    overflow-x: hidden;
+  }
+
+  .container{
+    width: 100%;
+    max-width: 100%;
+    padding: 0 16px;
+  }
+
+  /* HEADER LOGOS */
+  .site-header{
+    position: relative;
+    padding: 10px 0;
+  }
+
+  .nav-wrap{
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 12px !important;
+    flex-wrap: wrap !important;
+  }
+
+  .brand-logo{
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 10px !important;
+    flex-wrap: wrap !important;
+    width: 100%;
+  }
+
+  .brand-logo img{
+    height: 42px !important;
+    width: auto !important;
+    max-width: 90px !important;
+    object-fit: contain !important;
+  }
+
+  .logo-paris-cite{
+    height: 34px !important;
+    max-width: 120px !important;
+  }
+
+  /* HERO */
+  .hero-colored{
+    padding: 24px 0 90px !important;
+  }
+
+  .hero-title{
+    font-size: 2.2rem !important;
+    line-height: 1.1 !important;
+    text-align: left !important;
+  }
+
+  .hero-acronym{
+    font-size: 1rem !important;
+    line-height: 1.5 !important;
+  }
+
+  .hero-rule{
+    margin: 10px 0 14px !important;
+    border-top-width: 5px !important;
+  }
+
+  .hero-rows{
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  .hero-desc,
+  .hero-phone,
+  .hero-address{
+    justify-self: start !important;
+    text-align: left !important;
+    max-width: 100% !important;
+  }
+
+  /* BIG PHOTO UNDER HERO */
+  .diag-photo{
+    width: 100vw !important;
+    height: 220px !important;
+    margin-left: calc(50% - 50vw) !important;
+    margin-top: -50px !important;
+    overflow: hidden !important;
+  }
+
+  .diag-photo img{
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+  }
+
+  /* INTRO LAYOUT */
+  .intro-section{
+    padding: 24px 0 !important;
+  }
+
+  .container-two-cols{
+    display: block !important;
+    max-width: 100% !important;
+    padding: 0 16px !important;
+  }
+
+  .container-two-cols::before{
+    display: none !important;
+  }
+
+  .intro-left{
+    display: block !important;
+    padding-right: 0 !important;
+    margin-bottom: 20px !important;
+  }
+
+  .intro-line{
+    display: none !important;
+  }
+
+  .intro-nav{
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+
+  .intro-nav a{
+    font-size: 1.05rem !important;
+    line-height: 1.35 !important;
+  }
+
+  .intro-right{
+    padding-left: 0 !important;
+  }
+
+  .intro-title{
+    font-size: 2.3rem !important;
+    line-height: 1.1 !important;
+    text-align: left !important;
+    margin-bottom: 16px !important;
+  }
+
+  .intro-text{
+    max-width: 100% !important;
+    font-size: 1.05rem !important;
+    line-height: 1.75 !important;
+    text-align: left !important;
+  }
+
+  /* GENERAL TITLES */
+  h2{
+    font-size: 2.2rem !important;
+  }
+
+  h3{
+    font-size: 1.6rem !important;
+  }
+
+  .research-title{
+    display: block !important;
+    width: 100% !important;
+    margin: 0 0 14px 0 !important;
+    font-size: 2rem !important;
+    line-height: 1.15 !important;
+    text-align: center !important;
+    white-space: normal !important;
+  }
+
+  /* THEMES */
+  .theme{
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+    margin: 32px 0 !important;
+  }
+
+  .theme-img{
+    width: 220px !important;
+    height: 220px !important;
+    margin: 0 auto !important;
+  }
+
+  .theme-text,
+  .theme:nth-child(even) .theme-text,
+  .theme:nth-child(odd) .theme-text{
+    max-width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    text-align: left !important;
+    align-items: flex-start !important;
+  }
+
+  .theme-text p{
+    text-align: left !important;
+  }
+
+  /* GALLERY */
+  .gallery{
+    grid-template-columns: 36px 1fr 36px !important;
+  }
+
+  .g-img{
+    height: 220px !important;
+  }
+
+  /* PROJECTS */
+  .projects-wrap,
+  .projects--bleed .projects-wrap{
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  .projects--bleed .projects-photo{
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+
+  .projects-photo,
+  .projects--pyramid .projects-photo{
+    min-height: 220px !important;
+    clip-path: none !important;
+    border-radius: 14px !important;
+  }
+
+  .projects-text{
+    max-width: 100% !important;
+    margin-left: 0 !important;
+  }
+
+  .projects-text h2{
+    text-align: left !important;
+    font-size: 2rem !important;
+  }
+
+  /* FOOTER LOGOS */
+  .fb-wrap{
+    grid-template-columns: 1fr !important;
+  }
+
+  .fb-brand{
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+  }
+
+  .fb-brand img{
+    height: 40px !important;
+    width: auto !important;
+    max-width: 100px !important;
+  }
+
+  /* MARQUEE */
+  .marquee-content span{
+    font-size: 1rem !important;
+    margin: 0 16px !important;
+  }
+}
+
