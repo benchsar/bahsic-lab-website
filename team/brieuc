@@ -71,10 +71,10 @@
 
         <!-- Name and short intro on the right -->
         <div class="profile-right">
-          <h2 id="profile-title" class="intro-title">Yohann Garnier</h2>
-          <p class="profile-subtitle">Principal Investigator</p>
+          <h2 id="profile-title" class="intro-title">Brieuc PÉROT </h2>
+          <p class="profile-subtitle">Research Scientist</p>
           <p class="profile-affiliation">
-            Inserm U1134 – BAHSic Lab · Faculty of Medicine, Université des Antilles
+            Inserm U1134 – BAHSic Lab 
           </p>
 
           <div class="profile-contact-row">
@@ -84,10 +84,7 @@
           </div>
 
           <p class="intro-text">
-            Dr. Yohann Garnier is an assistant professor at the faculty of medicine at Université des Antilles.
-            His research within the BAHSic team at Inserm U1134 focuses on the profile and impact of microparticles
-            in sickle cell disease. These submicrometric extracellular vesicles are among the actors able to precipitate
-            the occurrence of crises in this disease.
+            Dr. Brieuc Pérot trained as an engineer at AgroParisTech, a leading French Grande École, where he developed a strong interest in immunology. He completed his final research internship at Harvard Medical School, studying mechanisms of apoptosis resistance in myeloid leukemia cells. He then pursued his PhD at the Institut Pasteur, where he investigated virus–host interactions in the context of Influenza A infection, using mouse models and genetically modified cell lines to study the impact of viral perturbations of autophagy. He subsequently joined the Imagine Institute for his postdoctoral research, focusing on the cellular mechanisms regulating immune responses to HIV infection and inflammatory diseases. Dr. Pérot is now a senior research scientist at Établissement Français du Sang and at INSERM unit UMR_S1134, where he studies the immune mechanisms underlying severe and potentially life-threatening reactions to blood transfusion.
           </p>
         </div>
       </div>
@@ -97,28 +94,17 @@
     <section class="news-section profile-content-section">
       <div class="container">
 
-        <article class="news-card news-card-featured news-highlight profile-block">
-          <div class="news-featured-content profile-block-full">
-            <h3 class="news-title news-title-featured">Short bio</h3>
-            <p class="news-text">
-              Dr. Yohann Garnier is an assistant professor at the faculty of medicine at Université des Antilles.
-              His research in the BAHSic team of Inserm U1134 is focused on the profile and impact of microparticles
-              in sickle cell disease. These submicrometric extracellular vesicles are part of the actors able to precipitate
-              the occurrence of crises in this disease.
-            </p>
-          </div>
-        </article>
-
         <div class="profile-grid-two">
 
           <article class="news-card news-card-featured news-highlight profile-block-small">
             <div class="news-featured-content profile-block-full">
               <h3 class="news-title news-title-featured">Research interests</h3>
               <ul class="profile-list">
-                <li>Microparticles biology</li>
-                <li>Endothelial cell and neutrophil</li>
-                <li>Flow cytometry</li>
-                <li>High resolution confocal microscopy</li>
+                <li>Immunology</li>
+                <li>Immunohematology</li>
+                <li>Sickle Cell Disease</li>
+                <li>Inflammation</li>
+                <li>Virology</li>
               </ul>
             </div>
           </article>
@@ -127,9 +113,12 @@
             <div class="news-featured-content profile-block-full">
               <h3 class="news-title news-title-featured">Key expertise</h3>
               <ul class="profile-list">
-                <li>RT-qPCR</li>
                 <li>Flow cytometry</li>
-                <li>ELISA</li>
+                <li>Immune cell purification, genetic modification, and immunophenotyping</li>
+                <li>Immune cell culture and co-culture systems</li>
+                <li>Inflammation monitoring (multiplex ELISA, NanoString, RNA-seq, scRNA-seq, immunophenotyping, RT-qPCR)</li>
+                <li>BSL-3 experimentation</li>
+                <li>Bioinformatics and data analysis</li>
               </ul>
             </div>
           </article>
@@ -140,11 +129,8 @@
           <div class="news-featured-content profile-block-full">
             <h3 class="news-title news-title-featured">Background</h3>
             <ul class="profile-list">
-              <li>PhD in Cellular and Molecular Biology – University of Antilles (2017)</li>
-              <li>MSc in Biology – University of Milano - Bicocca (2013)</li>
-              <li>Magister in Genetics – University of Paris VII (2013)</li>
-              <li>MSc in Genetics – University of Paris VII (2013)</li>
-              <li>BSc in Health Biology – University of Antilles (2010)</li>
+              <li>PhD in Immunology & Cellular biology– Paris 6 University / Pasteur Institute (2016)</li>
+              <li>Engineering school and MSc – AgroParisTech (French Grande École) / Harvard Medical School (2011)</li>
             </ul>
           </div>
         </article>
@@ -154,14 +140,8 @@
             <h3 class="news-title news-title-featured">Current projects</h3>
 
             <p class="news-text">
-              Assessing the impact of hydroxyurea on microparticles and neutrophils of sickle cell anemia patients
-              starting the treatment, and investigating the molecular bases of resistance to this treatment in patients
-              from 4 Caribbean islands, using flow cytometry, high resolution confocal microscopy and flow adhesion assays.
-            </p>
-
-            <p class="news-text">
-              Investigating the impact of loco-regional anesthesia on the proinflammatory properties of microparticles
-              of sickle cell anemia patients during crisis using flow cytometry and a flow adhesion assay.
+            Investigating the fundamental immunological mechanisms involved in unwanted immune responses to blood transfusion in children with sickle cell anemia.
+            Understanding blood group antigen transfers between donor and recipient red blood cells after blood transfusions.
             </p>
           </div>
         </article>
@@ -169,7 +149,11 @@
         <article class="news-card news-card-featured news-highlight profile-block">
           <div class="news-featured-content profile-block-full">
             <h3 class="news-title news-title-featured">Personal interests</h3>
-            <p class="news-text">Soccer</p>
+            <p class="news-text">Cinema</p>
+            <p class="news-text">Video games</p>
+            <p class="news-text">Theoretical physics</p>
+            <p class="news-text">Cooking</p>
+            <p class="news-text">Traveling</p>
           </div>
         </article>
 
