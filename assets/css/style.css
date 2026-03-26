@@ -2521,3 +2521,7 @@ h3{ font-size:var(--font-size-h3); }
   text-align: justify;
 }
 
+.profile-block h3,
+.profile-block-small h3{
+  text-align: center;
+}
