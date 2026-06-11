@@ -3020,3 +3020,47 @@ h3{ font-size:var(--font-size-h3); }
 .tech-img-bioinfo{
   object-position: center center;
 }
+
+.platform-img{
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  border-radius: 18px;
+}
+
+.platform-side{
+  min-width: 0;
+}
+
+.platform-img-left,
+.platform-img-right{
+  justify-self: center;
+}
+
+.platform-intro-grid{
+  max-width: 1400px;
+  width: calc(100% - 80px);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(260px, 0.85fr) minmax(420px, 1fr) minmax(260px, 0.85fr);
+  gap: 2rem;
+  align-items: center;
+}
+
+@media (max-width: 1200px){
+  .platform-intro-grid{
+    grid-template-columns: 1fr;
+    width: calc(100% - 32px);
+  }
+
+  .platform-center{
+    order: -1;
+  }
+
+  .platform-img{
+    max-width: 650px;
+    margin: 0 auto;
+  }
+}
