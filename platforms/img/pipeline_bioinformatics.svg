@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
+  <title id="title">Bioinformatics workflow from raw data to biological insight</title>
+  <desc id="desc">Vector workflow showing sequencing data preprocessing, quality control, normalization, integration, clustering, differential expression, enrichment, and biological interpretation.</desc>
+  <defs>
+    <style>
+      .title{font-family:Arial,Helvetica,sans-serif;font-weight:700;font-size:28px;fill:#a30000}
+      .box{fill:#ffffff;stroke:#d9e2ea;stroke-width:2;rx:18;filter:url(#shadow)}
+      .step{font-family:Arial,Helvetica,sans-serif;font-weight:700;font-size:17px;fill:#17323d}
+      .small{font-family:Arial,Helvetica,sans-serif;font-size:13px;fill:#536873}
+      .label{font-family:Arial,Helvetica,sans-serif;font-weight:700;font-size:15px;fill:#ffffff}
+      .arrow{stroke:#a30000;stroke-width:4;fill:none;marker-end:url(#arrowHead)}
+      .blue{fill:#0f5b64}.red{fill:#a30000}.orange{fill:#e87500}.green{fill:#20855f}.purple{fill:#6f42c1}.teal{fill:#0f8fa3}
+      .pale{fill:#f7f7f7;stroke:#e6edf2;stroke-width:1.5}
+      .axis{stroke:#78909c;stroke-width:1.5}
+      .dot1{fill:#a30000}.dot2{fill:#0f5b64}.dot3{fill:#e87500}.dot4{fill:#6f42c1}
+    </style>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="9" flood-color="#0f2630" flood-opacity="0.11"/></filter>
+    <marker id="arrowHead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#a30000"/></marker>
+  </defs>
+
+  <rect width="1200" height="650" fill="#ffffff"/>
+  <text class="title" x="600" y="50" text-anchor="middle">From raw data to biological insight</text>
+
+  <!-- Top workflow boxes -->
+  <g transform="translate(55,95)">
+    <rect class="box" width="150" height="95"/>
+    <circle class="red" cx="45" cy="46" r="23" opacity="0.95"/>
+    <rect class="blue" x="78" y="28" width="48" height="12" rx="3"/><rect class="blue" x="78" y="48" width="48" height="12" rx="3"/><rect class="blue" x="78" y="68" width="48" height="12" rx="3"/>
+    <text class="step" x="75" y="125" text-anchor="middle">Raw data</text>
+    <text class="small" x="75" y="145" text-anchor="middle">FASTQ / counts</text>
+  </g>
+  <path class="arrow" d="M215 142 H275"/>
+  <g transform="translate(285,95)">
+    <rect class="box" width="150" height="95"/>
+    <rect class="pale" x="25" y="25" width="100" height="48" rx="6"/>
+    <path class="axis" d="M35 65 H115 M35 65 V35"/>
+    <polyline points="35,60 48,55 60,49 72,43 86,39 102,33 115,30" fill="none" stroke="#0f5b64" stroke-width="4"/>
+    <text class="step" x="75" y="125" text-anchor="middle">Preprocessing</text>
+    <text class="small" x="75" y="145" text-anchor="middle">trimming, alignment</text>
+  </g>
+  <path class="arrow" d="M445 142 H505"/>
+  <g transform="translate(515,95)">
+    <rect class="box" width="150" height="95"/>
+    <path class="axis" d="M35 70 H120 M35 70 V25"/>
+    <rect class="teal" x="45" y="52" width="10" height="18"/><rect class="teal" x="62" y="42" width="10" height="28"/><rect class="teal" x="79" y="32" width="10" height="38"/><rect class="teal" x="96" y="48" width="10" height="22"/>
+    <text class="step" x="75" y="125" text-anchor="middle">Quality control</text>
+    <text class="small" x="75" y="145" text-anchor="middle">filtering, metrics</text>
+  </g>
+  <path class="arrow" d="M675 142 H735"/>
+  <g transform="translate(745,95)">
+    <rect class="box" width="150" height="95"/>
+    <circle cx="54" cy="50" r="28" fill="#d9edf7"/><path d="M30 50 C45 12,65 12,80 50 C65 88,45 88,30 50" fill="none" stroke="#0f5b64" stroke-width="4"/>
+    <text class="step" x="75" y="125" text-anchor="middle">Normalization</text>
+    <text class="small" x="75" y="145" text-anchor="middle">scaling, log transform</text>
+  </g>
+  <path class="arrow" d="M905 142 H965"/>
+  <g transform="translate(975,95)">
+    <rect class="box" width="150" height="95"/>
+    <circle class="dot1" cx="52" cy="42" r="6"/><circle class="dot2" cx="76" cy="57" r="6"/><circle class="dot3" cx="93" cy="37" r="6"/><circle class="dot4" cx="62" cy="70" r="6"/><circle class="dot2" cx="105" cy="64" r="6"/>
+    <path d="M52 42 L76 57 L93 37 M76 57 L62 70 M76 57 L105 64" stroke="#78909c" stroke-width="2"/>
+    <text class="step" x="75" y="125" text-anchor="middle">Integration</text>
+    <text class="small" x="75" y="145" text-anchor="middle">batch correction</text>
+  </g>
+
+  <!-- Middle analyses -->
+  <path class="arrow" d="M1050 250 V300 H885"/>
+  <g transform="translate(730,300)">
+    <rect class="box" width="185" height="115"/>
+    <path class="axis" d="M35 80 H145 M35 80 V25"/>
+    <circle class="dot1" cx="65" cy="58" r="5"/><circle class="dot1" cx="75" cy="67" r="5"/><circle class="dot1" cx="58" cy="72" r="5"/>
+    <circle class="dot2" cx="115" cy="42" r="5"/><circle class="dot2" cx="125" cy="55" r="5"/><circle class="dot2" cx="107" cy="60" r="5"/>
+    <circle class="dot3" cx="92" cy="75" r="5"/><circle class="dot3" cx="99" cy="86" r="5"/>
+    <text class="step" x="92" y="145" text-anchor="middle">Clustering</text>
+  </g>
+  <path class="arrow" d="M725 357 H640"/>
+  <g transform="translate(455,300)">
+    <rect class="box" width="185" height="115"/>
+    <path class="axis" d="M35 82 H150 M35 82 V25"/>
+    <circle class="dot1" cx="58" cy="67" r="4"/><circle class="dot1" cx="68" cy="52" r="4"/><circle class="dot1" cx="73" cy="62" r="4"/>
+    <circle class="dot2" cx="116" cy="43" r="4"/><circle class="dot2" cx="128" cy="55" r="4"/><circle class="dot2" cx="122" cy="68" r="4"/>
+    <path d="M90 30 V82" stroke="#a30000" stroke-width="2" stroke-dasharray="4 4"/>
+    <text class="step" x="92" y="145" text-anchor="middle">Differential expression</text>
+  </g>
+  <path class="arrow" d="M450 357 H365"/>
+  <g transform="translate(180,300)">
+    <rect class="box" width="185" height="115"/>
+    <rect class="green" x="30" y="28" width="38" height="20" rx="4"/><rect class="orange" x="30" y="58" width="70" height="20" rx="4"/><rect class="purple" x="30" y="88" width="95" height="20" rx="4"/>
+    <rect class="teal" x="112" y="28" width="38" height="20" rx="4"/><rect class="red" x="112" y="58" width="50" height="20" rx="4"/>
+    <text class="step" x="92" y="145" text-anchor="middle">Enrichment analysis</text>
+  </g>
+
+  <!-- Bottom output -->
+  <path class="arrow" d="M272 455 V515 H510"/>
+  <g transform="translate(510,485)">
+    <rect class="box" width="190" height="105"/>
+    <rect x="35" y="25" width="120" height="12" rx="3" class="red" opacity="0.9"/><rect x="35" y="47" width="85" height="12" rx="3" class="orange" opacity="0.9"/><rect x="35" y="69" width="145" height="12" rx="3" class="teal" opacity="0.9"/>
+    <text class="step" x="95" y="135" text-anchor="middle">Biological interpretation</text>
+  </g>
+  <path class="arrow" d="M705 537 H850"/>
+  <g transform="translate(850,485)">
+    <rect class="box" width="220" height="105"/>
+    <path class="axis" d="M35 75 H180 M35 75 V25"/>
+    <polyline points="35,70 58,60 82,66 106,45 132,39 158,28 180,34" fill="none" stroke="#0f5b64" stroke-width="4"/>
+    <circle class="dot1" cx="60" cy="60" r="5"/><circle class="dot3" cx="106" cy="45" r="5"/><circle class="dot2" cx="158" cy="28" r="5"/>
+    <text class="step" x="110" y="135" text-anchor="middle">Publication-ready figures</text>
+  </g>
+</svg>

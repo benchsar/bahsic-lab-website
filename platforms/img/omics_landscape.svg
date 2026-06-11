@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">Omics technologies and data types</title>
+  <desc id="desc">Vector map showing omics fields including genomics, transcriptomics, epigenomics, proteomics, metabolomics, and translatomics, with sequencing and data types.</desc>
+  <defs>
+    <style>
+      .txt{font-family:Arial,Helvetica,sans-serif;font-weight:700;fill:#fff}
+      .small{font-size:20px}.med{font-size:26px}.big{font-size:34px}.center{font-size:40px}
+      .node{filter:url(#shadow)}
+      .red{fill:#a30000}.red2{fill:#bf2d2d}.orange{fill:#ee7a00}.green{fill:#009b4e}.lime{fill:#79a72f}.purple{fill:#6f42c1}.teal{fill:#1090a3}.blue{fill:#0f5b98}
+      .arrow{fill:none;stroke-width:6;marker-end:url(#arrow)}
+      .a-red{stroke:#a30000}.a-orange{stroke:#ee7a00}.a-green{stroke:#009b4e}.a-lime{stroke:#79a72f}.a-purple{stroke:#6f42c1}.a-teal{stroke:#1090a3}
+    </style>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="7" stdDeviation="7" flood-color="#0f2630" flood-opacity="0.16"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="context-stroke"/></marker>
+  </defs>
+  <rect width="1200" height="700" fill="#ffffff"/>
+
+  <!-- Center -->
+  <circle class="node blue" cx="625" cy="350" r="78"/>
+  <text class="txt center" x="625" y="363" text-anchor="middle">OMICS</text>
+
+  <!-- Main categories -->
+  <ellipse class="node red2" cx="375" cy="275" rx="112" ry="42"/>
+  <text class="txt med" x="375" y="285" text-anchor="middle">Genomics</text>
+
+  <ellipse class="node green" cx="625" cy="145" rx="150" ry="42"/>
+  <text class="txt med" x="625" y="155" text-anchor="middle">Epigenomics</text>
+
+  <ellipse class="node orange" cx="345" cy="500" rx="150" ry="42"/>
+  <text class="txt med" x="345" y="510" text-anchor="middle">Transcriptomics</text>
+
+  <ellipse class="node purple" cx="905" cy="455" rx="135" ry="42"/>
+  <text class="txt med" x="905" y="465" text-anchor="middle">Proteomics</text>
+
+  <ellipse class="node lime" cx="930" cy="285" rx="145" ry="42"/>
+  <text class="txt med" x="930" y="295" text-anchor="middle">Metabolomics</text>
+
+  <ellipse class="node teal" cx="625" cy="555" rx="140" ry="42"/>
+  <text class="txt med" x="625" y="565" text-anchor="middle">Translatomics</text>
+
+  <!-- Center arrows -->
+  <path class="arrow a-red" d="M555 318 L475 292"/>
+  <path class="arrow a-green" d="M625 264 L625 198"/>
+  <path class="arrow a-orange" d="M563 402 L455 470"/>
+  <path class="arrow a-purple" d="M690 394 L780 435"/>
+  <path class="arrow a-lime" d="M698 326 L795 300"/>
+  <path class="arrow a-teal" d="M625 434 L625 505"/>
+
+  <!-- Genomics technology boxes -->
+  <g class="node">
+    <rect class="red" x="55" y="105" width="255" height="52" rx="10"/><text class="txt small" x="182" y="138" text-anchor="middle">PacBio sequencing</text>
+    <rect class="red" x="55" y="175" width="255" height="52" rx="10"/><text class="txt small" x="182" y="208" text-anchor="middle">Nanopore sequencing</text>
+    <rect class="red" x="85" y="245" width="195" height="52" rx="10"/><text class="txt small" x="182" y="278" text-anchor="middle">Exome-seq</text>
+    <rect class="red" x="70" y="315" width="225" height="52" rx="10"/><text class="txt small" x="182" y="348" text-anchor="middle">Phylogenomics</text>
+    <rect class="red" x="90" y="385" width="185" height="52" rx="10"/><text class="txt small" x="182" y="418" text-anchor="middle">RAD-seq</text>
+  </g>
+  <path class="arrow a-red" d="M320 130 C340 160,350 190,360 232"/>
+  <path class="arrow a-red" d="M320 200 C345 215,355 235,365 248"/>
+  <path class="arrow a-red" d="M292 270 L258 270" transform="translate(100,0) scale(-1,1) translate(-650,0)"/>
+  <path class="arrow a-red" d="M310 340 C335 325,350 312,365 300"/>
+  <path class="arrow a-red" d="M295 410 C330 375,350 340,365 305"/>
+
+  <!-- Transcriptomics boxes -->
+  <g class="node">
+    <rect class="orange" x="105" y="590" width="220" height="52" rx="10"/><text class="txt small" x="215" y="623" text-anchor="middle">Bulk RNA-seq</text>
+    <rect class="orange" x="370" y="590" width="245" height="52" rx="10"/><text class="txt small" x="492" y="612" text-anchor="middle">Single-cell</text><text class="txt small" x="492" y="636" text-anchor="middle">RNA-seq</text>
+  </g>
+  <path class="arrow a-orange" d="M285 535 L230 585"/>
+  <path class="arrow a-orange" d="M398 535 L470 585"/>
+
+  <!-- Epigenomics boxes -->
+  <g class="node">
+    <rect class="green" x="475" y="35" width="180" height="52" rx="10"/><text class="txt small" x="565" y="68" text-anchor="middle">ChIP-seq</text>
+    <rect class="green" x="710" y="35" width="160" height="52" rx="10"/><text class="txt small" x="790" y="68" text-anchor="middle">BS-seq</text>
+  </g>
+  <path class="arrow a-green" d="M592 105 L580 90"/>
+  <path class="arrow a-green" d="M665 105 L760 90"/>
+
+  <!-- Translatomics box -->
+  <g class="node">
+    <rect class="teal" x="545" y="625" width="160" height="52" rx="10"/><text class="txt small" x="625" y="658" text-anchor="middle">Ribo-seq</text>
+  </g>
+  <path class="arrow a-teal" d="M625 600 L625 620"/>
+</svg>
