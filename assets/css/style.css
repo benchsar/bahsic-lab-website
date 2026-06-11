@@ -2645,70 +2645,91 @@ h3{ font-size:var(--font-size-h3); }
   text-align: center;
 }
 
+.tech-section{
+  padding: 4rem 2rem;
+  background: #f7f7f7;
+  text-align: center;
+}
+
 .tech-section h2{
   font-family: 'Cormorant Garamond', serif;
   font-size: 2.5rem;
   color: #a30000;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 
 .tech-grid{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto;
 }
 
 .tech-card{
-  background: white;
+  background: #fff;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease;
-}
-
-.tech-card:hover{
-  transform: translateY(-6px);
+  display: flex;
+  flex-direction: column;
 }
 
 .tech-card img{
   width: 100%;
   height: 180px;
   object-fit: cover;
+  display: block;
+}
+
+/* cadrage spécifique */
+.tech-img-bioinfo{
+  object-position: center center;
+}
+
+.tech-card:nth-child(2) img{
+  object-position: center center;
+}
+
+.tech-card:nth-child(3) img{
+  object-position: center center;
 }
 
 .tech-content{
   padding: 1.5rem;
   text-align: left;
+  flex: 1;
 }
 
 .tech-content h3{
   color: #a30000;
-  margin-bottom: 0.6rem;
-
   font-size: 1.3rem;
   line-height: 1.35;
-  font-weight: 600;
-  letter-spacing: 0.2px;
+  margin-bottom: 0.6rem;
 }
 
 .tech-content p{
   font-size: 0.95rem;
   color: #555;
-  line-height: 1.4;
+  line-height: 1.45;
 }
 
 .tech-link{
   display: inline-block;
   margin-top: 1rem;
   color: #a30000;
-  font-weight: bold;
+  font-weight: 700;
   text-decoration: none;
 }
 
 .tech-link:hover{
   text-decoration: underline;
+}
+
+@media (max-width: 900px){
+  .tech-grid{
+    grid-template-columns: 1fr;
+  }
 }
 
 .intro-nav{
@@ -2842,15 +2863,9 @@ h3{ font-size:var(--font-size-h3); }
 
 .platform-feature{
   display: grid;
-  grid-template-columns: 380px 1fr;
+  grid-template-columns: 38% 1fr;
   gap: 2rem;
   align-items: center;
-  background: #fff;
-  border: 1px solid rgba(15,23,42,0.06);
-  border-radius: 20px;
-  padding: 1.5rem;
-  box-shadow: 0 8px 24px rgba(15,23,42,0.05);
-  margin-bottom: 2rem;
 }
 
 .platform-feature-reverse{
@@ -2867,9 +2882,11 @@ h3{ font-size:var(--font-size-h3); }
 
 .platform-feature-media img{
   width: 100%;
-  height: 280px;
-  object-fit: cover;
-  border-radius: 16px;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+  display: block;
+  border-radius: 14px;
 }
 
 .platform-feature-text h3{
@@ -2919,11 +2936,10 @@ h3{ font-size:var(--font-size-h3); }
 }
 
 .tech-card img{
-  width: 100%;
-  height: 100% !important;
-  object-fit: cover;
-  object-position: center;
-  display: block;
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    display:block;
 }
 
 .platform-intro-grid{
@@ -2954,4 +2970,16 @@ h3{ font-size:var(--font-size-h3); }
 .platform-intro-grid .platform-side:last-child img{
   object-fit: cover !important;
   object-position: center !important;
+}
+
+.tech-card img,
+.tech-img{
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.tech-img-bioinfo{
+  object-position: center;
 }
