@@ -362,9 +362,9 @@ h3{ font-size:var(--font-size-h3); }
 
 .g-img{
   width:100%;
-  height:clamp(340px, 50vw, 540px);
+  height:clamp(500px, 65vw, 750px);
   object-fit:cover;
-  display:block;
+  object-position:center;
 }
 
 .g-img-hugo{
