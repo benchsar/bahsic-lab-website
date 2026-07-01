@@ -3087,3 +3087,31 @@ h3{ font-size:var(--font-size-h3); }
     margin: 0 auto;
   }
 }
+
+
+.tech-content {
+  position: relative;
+}
+
+.coming-soon-badge {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: #fff7cc;
+  color: #8a6500;
+  border: 1px solid #f4d35e;
+  border-radius: 12px;
+  padding: 10px 16px;
+  font-weight: 600;
+  font-size: 0.95rem;
+
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  transition: all 0.25s ease;
+}
+
+.coming-soon-badge.show {
+  opacity: 1;
+  transform: translateY(0);
+}

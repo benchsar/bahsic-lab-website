@@ -101,32 +101,37 @@
     </div>
 
     <!-- CARD 2 -->
-    <div class="tech-card">
-      <img src="assets/img/adherence.jpeg" alt="Cell assays">
-      <div class="tech-content">
-        <h3> Dynamic adhesion</h3>
-        <p>
-          Experimental platforms including flow cytometry, cell culture,
-          and molecular assays for functional validation.
-        </p>
-        <a href="#" class="tech-link">Explore platform →</a>
-      </div>
-    </div>
+<div class="tech-card">
+  <img src="assets/img/adherence.jpeg" alt="Cell assays">
+
+  <div class="tech-content">
+    <h3>Dynamic adhesion</h3>
+    <p>
+      Experimental platforms including flow cytometry, cell culture,
+      and molecular assays for functional validation.
+    </p>
+
+    <a href="#" class="tech-link coming-soon-trigger">
+      Explore platform →
+    </a>
+
+    <div class="coming-soon-badge">Coming soon 🚧</div>
+  </div>
+</div>
 
     <!-- CARD 4 -->
-    <div class="tech-card">
+     <div class="tech-card">
       <img src="assets/img/hemato_tech.jpeg" alt="Hematopoiesis">
-      <div class="tech-content">
-        <h3>Hematopoietic & Disease Models</h3>
-        <p>
-          Study of hematopoietic stem cells and disease contexts such as
-          inflammatory anemia and sickle cell disease.
-        </p>
-        <a href="#" class="tech-link">Explore platform →</a>
-      </div>
-    </div>
 
-  </div>
+       <div class="tech-content">
+        <h3>Hematopoietic & Disease Models</h3>
+        <p>  Study of hematopoietic stem cells and disease contexts such as inflammatory anemia and sickle cell disease.</p>
+
+        <a href="#" class="tech-link coming-soon-trigger"> Explore platform →</a>
+
+      <div class="coming-soon-badge">Coming soon 🚧</div>
+    </div>
+</div>
 </section>
 
     <section class="marquee">
@@ -297,6 +302,21 @@
           a.addEventListener('click', () => setOpen(false));
         });
       })();
+       /* === Coming Soon Badge === */
+  document.querySelectorAll('.coming-soon-trigger').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+
+      const badge = this.parentElement.querySelector('.coming-soon-badge');
+      badge.classList.add('show');
+
+      setTimeout(() => {
+        badge.classList.remove('show');
+      }, 2000);
+    });
+  });
     </script>
   </body>
 </html>
+
+
