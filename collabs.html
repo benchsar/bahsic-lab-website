@@ -62,78 +62,60 @@
             <nav class="intro-nav">
             <a href="index.html">Home</a>
             <a href="team.html">Team</a>
-            <a href="projects.html">Field work &amp; collaborations</a>
-            <a href="plateforms.html" aria-current="page">Methods & Technologies</a>
+            <a href="projects.html">Field work </a>
+            <a href="plateforms.html">Methods & Technologies</a>
             <a href="publications.html">Publications</a>
-            <a href="collabs.html">Collaborations</a>
+            <a href="collabs.html"aria-current="page">Collaborations</a>
             <a href="news.html">News</a>
-            <a href="contact.html">Contact</a> 
+            <a href="contact.html">Contact</a>
             </nav>
         </aside>
 
         <div class="intro-right">
-          <h2 id="news-title" class="intro-title">Our Methods & Technologies</h2>
+          <h2 id="news-title" class="intro-title">Our Collaborations</h2>
           <p class="intro-text">
-          BaHSic brings together three complementary platforms: Bioinformatics & Omics Technologies, Dynamic Adhesion, 
-          and Hematopoietic & Disease Models. By combining advanced computational analyses, experimental validation, 
-          and disease-focused models, these platforms support innovative research in hematopoiesis, inflammation, and red blood cell disorders.
+            Collaboration is at the heart of BAHSic-U1134. We build bridges between clinicians, researchers, engineers, bioinformaticians, and international partners to address complex questions in hematology. Our network combines patient cohorts, advanced experimental models, state-of-the-art omics technologies, and computational biology, creating an integrated ecosystem that accelerates scientific discovery and translational medicine.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- ========== Section Technologies ========== -->
-<section class="tech-section">
-  <h2>Platforms & Technologies</h2>
+    <!-- ========== Section actualités ========== -->
+<section class="collab-section">
+  <div class="container">
+    <div class="orbit-network">
+      <h2>Collaborative Network</h2>
+      <p>
+        A multidisciplinary network connecting clinical partners, academic laboratories
+        and technology platforms.
+      </p>
 
-  <div class="tech-grid">
+      <div class="orbit-map">
+        <div class="orbit-ring ring-1"></div>
+        <div class="orbit-ring ring-2"></div>
 
-    <!-- CARD 1 -->
-    <div class="tech-card">
-      <img class="tech-img tech-img-bioinfo" src="assets/img/bioinfo_tech.png" alt="Bioinformatics">
-      <div class="tech-content">
-        <h3>Bioinformatics & Omics Technologies</h3>
-        <p>
-          Integrative analysis of single-cell and bulk transcriptomic data,
-          including clustering, differential expression, and functional enrichment.
-        </p>
-        <a href="platforms/bioinformatics.html" class="tech-link">Explore platform →</a>
+        <div class="orbit-center">BAHSic<br>U1134</div>
+
+        <div class="orbit-node n-hospital">Hospitals<br>& clinicians</div>
+        <div class="orbit-node n-inserm">INSERM<br>units</div>
+        <div class="orbit-node n-omics">Omics<br>platforms</div>
+        <div class="orbit-node n-int">International<br>partners</div>
+        <div class="orbit-node n-cohorts">Clinical<br>cohorts</div>
+        <div class="orbit-node n-biobank">Biobanks</div>
       </div>
     </div>
-
-    <!-- CARD 2 -->
-<div class="tech-card">
-  <img src="assets/img/adherence.jpeg" alt="Cell assays">
-
-  <div class="tech-content">
-    <h3>Dynamic adhesion</h3>
-    <p>
-      Experimental platforms including flow cytometry, cell culture,
-      and molecular assays for functional validation.
-    </p>
-
-    <a href="#" class="tech-link coming-soon-trigger">
-      Explore platform →
-    </a>
-
-    <div class="coming-soon-badge">Coming soon 🚧</div>
   </div>
-</div>
-
-    <!-- CARD 4 -->
-     <div class="tech-card">
-      <img src="assets/img/hemato_tech.jpeg" alt="Hematopoiesis">
-
-       <div class="tech-content">
-        <h3>Hematopoietic & Disease Models</h3>
-        <p>  Study of hematopoietic stem cells and disease contexts such as inflammatory anemia and sickle cell disease.</p>
-
-        <a href="#" class="tech-link coming-soon-trigger"> Explore platform →</a>
-
-      <div class="coming-soon-badge">Coming soon 🚧</div>
-    </div>
-</div>
 </section>
+
+
+
+
+
+
+
+
+
+
 
     <section class="marquee">
   <div class="marquee-content">
@@ -303,21 +285,6 @@
           a.addEventListener('click', () => setOpen(false));
         });
       })();
-       /* === Coming Soon Badge === */
-  document.querySelectorAll('.coming-soon-trigger').forEach(btn => {
-    btn.addEventListener('click', function(e) {
-      e.preventDefault();
-
-      const badge = this.parentElement.querySelector('.coming-soon-badge');
-      badge.classList.add('show');
-
-      setTimeout(() => {
-        badge.classList.remove('show');
-      }, 2000);
-    });
-  });
     </script>
   </body>
 </html>
-
-
