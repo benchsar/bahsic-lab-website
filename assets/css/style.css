@@ -1,3 +1,18 @@
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
 /* =========================================================
    Palette & typo
    ========================================================= */
@@ -3494,5 +3509,230 @@ h3{ font-size:var(--font-size-h3); }
 
   .orbit-node {
     width: 240px;
+  }
+}
+
+
+
+
+@media (max-width: 768px) {
+  .news-item,
+  .news-content,
+  .event-content,
+  .article-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    gap: 24px;
+  }
+
+  .news-item > *,
+  .news-content > *,
+  .event-content > *,
+  .article-content > * {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .news-item img,
+  .news-content img,
+  .event-content img,
+  .article-content img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+@media (max-width: 768px) {
+  .news-grid,
+  .event-grid,
+  .article-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+@media (max-width: 768px) {
+  .platforms-grid,
+  .platform-cards,
+  .technologies-grid {
+    display: grid;
+    grid-template-columns: 1fr !important;
+    gap: 28px;
+    padding: 0 20px;
+  }
+
+  .platform-card {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin: 0 auto;
+  }
+
+  .platform-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+  }
+
+  .platform-card h2,
+  .platform-card h3,
+  .platform-card p {
+    width: 100%;
+    max-width: 100%;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+}
+
+
+/* =========================================================
+   CORRECTION MOBILE FINALE
+   À placer tout à la fin de style.css
+   ========================================================= */
+
+@media screen and (max-width: 768px){
+
+  /* Empêche tous les éléments Grid/Flex de dépasser */
+  main,
+  section,
+  .container,
+  .container-two-cols,
+  .intro-right,
+  .news-content,
+  .news-featured-content{
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  /* =========================
+     NEWS
+     ========================= */
+
+  .news-card,
+  .news-card-featured{
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    gap: 0 !important;
+    overflow: hidden !important;
+  }
+
+  .news-img,
+  .news-img-featured{
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    object-fit: contain !important;
+  }
+
+  .news-content,
+  .news-featured-content{
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    padding: 20px !important;
+  }
+
+  .news-title,
+  .news-title-featured,
+  .news-date-featured,
+  .news-text,
+  .news-meta{
+    width: 100% !important;
+    max-width: 100% !important;
+    white-space: normal !important;
+    overflow-wrap: break-word !important;
+    word-break: normal !important;
+  }
+
+  .news-title-featured{
+    font-size: 1.8rem !important;
+    line-height: 1.2 !important;
+  }
+
+  .news-text{
+    font-size: 1rem !important;
+    line-height: 1.65 !important;
+    text-align: left !important;
+  }
+
+  .news-highlight{
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 14px !important;
+    margin-bottom: 24px !important;
+  }
+
+  /* =========================
+     PLATFORMS & TECHNOLOGIES
+     ========================= */
+
+  .platforms-grid,
+  .platform-grid,
+  .platform-cards,
+  .technologies-grid{
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    gap: 24px !important;
+    padding: 0 !important;
+  }
+
+  .platform-card,
+  .technology-card{
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    height: auto !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+  }
+
+  .platform-card img,
+  .technology-card img{
+    display: block !important;
+    width: 100% !important;
+    height: 220px !important;
+    max-width: 100% !important;
+    object-fit: cover !important;
+  }
+
+  .platform-card h2,
+  .platform-card h3,
+  .platform-card h4,
+  .platform-card p,
+  .technology-card h2,
+  .technology-card h3,
+  .technology-card h4,
+  .technology-card p{
+    width: 100% !important;
+    max-width: 100% !important;
+    white-space: normal !important;
+    overflow-wrap: break-word !important;
+    word-break: normal !important;
+  }
+
+  .platform-card h3,
+  .technology-card h3{
+    font-size: 2rem !important;
+    line-height: 1.15 !important;
+  }
+
+  /* Titre Platforms & Technologies */
+  .platforms-title,
+  .technologies-title{
+    width: 100% !important;
+    max-width: 100% !important;
+    font-size: 2.5rem !important;
+    line-height: 1.1 !important;
+    white-space: normal !important;
   }
 }
