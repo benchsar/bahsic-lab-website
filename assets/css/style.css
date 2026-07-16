@@ -3808,3 +3808,103 @@ h3{ font-size:var(--font-size-h3); }
   }
 }
 grid-template-columns: minmax(0, 1fr) !important;
+
+/* =========================================================
+   FOOTER DESKTOP — logos à gauche, Stay in touch à droite
+   ========================================================= */
+
+@media screen and (min-width: 901px){
+
+  /* Élargir uniquement le conteneur du footer */
+  .footer-band > .container{
+    width: 100% !important;
+    max-width: 1600px !important;
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+  }
+
+  .fb-wrap{
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) 470px !important;
+    gap: 60px !important;
+    align-items: start !important;
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+  /* Partie gauche : logos + adresse */
+  .fb-left{
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  /* Partie droite */
+  .fb-right{
+    width: 470px !important;
+    max-width: 1800px !important;
+    justify-self: end !important;
+    margin-left: 0 !important;
+  }
+
+  .fb-card{
+    display: block !important;
+    width: 470px !important;
+    max-width: 1800px !important;
+    margin: 0 !important;
+  }
+
+  .fb-social{
+    width: 470px !important;
+    justify-content: flex-start !important;
+  }
+}
+
+/* Footer mobile */
+@media screen and (min-width: 901px){
+
+  .footer-band > .container{
+    width: 100%;
+    max-width: 1600px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .fb-wrap{
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 470px;
+    gap: 60px;
+    align-items: start;
+    width: 100%;
+  }
+
+  .fb-left{
+    min-width: 0;
+  }
+
+  .fb-right{
+    width: 470px;
+    justify-self: end;
+  }
+
+  .fb-card{
+    width: 100%;
+  }
+
+  .fb-social{
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (max-width: 900px){
+
+  .fb-wrap{
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .fb-right,
+  .fb-card{
+    width: 100%;
+    max-width: 100%;
+  }
+}
