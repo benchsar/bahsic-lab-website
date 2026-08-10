@@ -1,0 +1,2142 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>BAHSic U1134 — Field Work</title>
+
+  <meta
+    name="description"
+    content="Discover BAHSic-U1134 research projects, clinical collaborations and experimental approaches."
+  >
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+
+    /* =========================================================
+       ROOT
+    ========================================================= */
+
+    :root {
+      --red: #8e1730;
+      --red-dark: #681022;
+      --red-light: #f8eef1;
+
+      --text: #202124;
+      --text-soft: #666a70;
+
+      --border: #e7e7e7;
+      --background: #ffffff;
+      --background-soft: #f8f8f8;
+
+      --radius-small: 14px;
+      --radius: 22px;
+      --radius-large: 30px;
+
+      --shadow:
+        0 12px 40px rgba(0, 0, 0, 0.07);
+
+      --shadow-hover:
+        0 18px 55px rgba(0, 0, 0, 0.11);
+
+      --max-width: 1240px;
+    }
+
+
+    /* =========================================================
+       RESET
+    ========================================================= */
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+
+      font-family:
+        "Inter",
+        Arial,
+        sans-serif;
+
+      line-height: 1.7;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+
+    /* =========================================================
+       GLOBAL
+    ========================================================= */
+
+    .container {
+      width: min(92%, var(--max-width));
+      margin: 0 auto;
+    }
+
+    .section-tag {
+      display: inline-block;
+
+      margin-bottom: 10px;
+
+      font-size: 0.74rem;
+      font-weight: 800;
+
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+
+      color: var(--red);
+    }
+
+    .section-title {
+      margin: 0 0 15px;
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+
+      line-height: 1.15;
+    }
+
+    .section-lead {
+      max-width: 760px;
+      color: var(--text-soft);
+      font-size: 1.05rem;
+    }
+
+
+    /* =========================================================
+       HERO
+    ========================================================= */
+
+    .hero-colored {
+      min-height: 520px;
+
+      position: relative;
+      overflow: hidden;
+
+      display: flex;
+      align-items: flex-end;
+
+      color: white;
+
+      background:
+        linear-gradient(
+          110deg,
+          rgba(80, 5, 20, 0.92),
+          rgba(120, 18, 42, 0.65)
+        );
+    }
+
+    .hero-bg-video {
+      position: absolute;
+
+      inset: 0;
+
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+
+      z-index: -2;
+    }
+
+    .hero-colored::before {
+      content: "";
+
+      position: absolute;
+      inset: 0;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(52, 4, 15, 0.92) 0%,
+          rgba(79, 9, 27, 0.76) 40%,
+          rgba(90, 12, 30, 0.25) 100%
+        );
+
+      z-index: -1;
+    }
+
+    .hero-container {
+      padding-top: 110px;
+      padding-bottom: 65px;
+    }
+
+    .hero-title {
+      margin: 0;
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size: clamp(3.3rem, 8vw, 6.5rem);
+
+      font-weight: 800;
+      line-height: 0.95;
+    }
+
+    .hero-acronym {
+      margin-top: 18px;
+
+      max-width: 780px;
+
+      font-size: clamp(1rem, 2vw, 1.25rem);
+
+      opacity: 0.95;
+    }
+
+    .hero-rule {
+      margin: 32px 0;
+
+      max-width: 950px;
+
+      border: 0;
+      border-top: 1px solid rgba(255,255,255,0.4);
+    }
+
+    .hero-rows {
+      max-width: 1100px;
+
+      display: grid;
+
+      grid-template-columns:
+        1.6fr 1fr 1fr;
+
+      gap: 35px;
+    }
+
+    .hero-desc,
+    .hero-phone,
+    .hero-address {
+      margin: 0;
+    }
+
+    .hero-phone,
+    .hero-address {
+      display: flex;
+      flex-direction: column;
+
+      font-style: normal;
+    }
+
+    .hero-label {
+      margin-bottom: 5px;
+
+      font-weight: 700;
+      font-size: 0.76rem;
+
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+
+      opacity: 0.75;
+    }
+
+    .hero-value {
+      font-size: 0.94rem;
+    }
+
+
+    /* =========================================================
+       INTRO + LEFT NAV
+    ========================================================= */
+
+    .intro-section {
+      padding: 75px 0;
+
+      border-bottom: 1px solid var(--border);
+    }
+
+    .container-two-cols {
+      width: min(92%, var(--max-width));
+
+      margin: auto;
+
+      display: grid;
+
+      grid-template-columns:
+        230px
+        minmax(0, 1fr);
+
+      gap: 80px;
+    }
+
+    .intro-nav {
+      display: flex;
+      flex-direction: column;
+
+      gap: 8px;
+
+      position: sticky;
+      top: 30px;
+    }
+
+    .intro-nav a {
+      padding: 10px 14px;
+
+      color: #666;
+
+      font-size: 0.92rem;
+      font-weight: 500;
+
+      border-radius: 8px;
+
+      transition:
+        background 0.2s ease,
+        color 0.2s ease;
+    }
+
+    .intro-nav a:hover {
+      color: var(--red);
+      background: var(--red-light);
+    }
+
+    .intro-nav a[aria-current="page"] {
+      color: var(--red);
+      background: var(--red-light);
+
+      font-weight: 700;
+    }
+
+    .intro-title {
+      margin: 0 0 20px;
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size: clamp(2.5rem, 5vw, 4.7rem);
+
+      line-height: 1;
+    }
+
+    .intro-text {
+      margin: 0;
+
+      max-width: 800px;
+
+      color: var(--text-soft);
+
+      font-size: clamp(1.05rem, 2vw, 1.25rem);
+
+      line-height: 1.8;
+    }
+
+
+    /* =========================================================
+       FIELDWORK
+    ========================================================= */
+
+    .fieldwork-section {
+      padding: 90px 0 110px;
+    }
+
+
+    /* =========================================================
+       MAIN IMAGE
+    ========================================================= */
+
+    .fieldwork-figure {
+      margin: 0 0 80px;
+
+      border-radius: var(--radius-large);
+
+      overflow: hidden;
+
+      background: var(--background-soft);
+
+      box-shadow: var(--shadow);
+    }
+
+    .fieldwork-main-img {
+      width: 100%;
+      height: auto;
+
+      transition: transform 0.5s ease;
+    }
+
+    .fieldwork-figure:hover .fieldwork-main-img {
+      transform: scale(1.015);
+    }
+
+
+    /* =========================================================
+       INTRO CARD
+    ========================================================= */
+
+    .intro-card {
+      max-width: 900px;
+
+      margin: 0 auto 65px;
+
+      text-align: center;
+    }
+
+    .intro-card h2 {
+      margin: 0 0 20px;
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size: clamp(2.3rem, 4vw, 3.6rem);
+    }
+
+    .intro-card p {
+      margin: 0;
+
+      color: var(--text-soft);
+
+      font-size: 1.05rem;
+    }
+
+
+    /* =========================================================
+       PROJECT GRID
+    ========================================================= */
+
+    .project-grid {
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 24px;
+
+      margin-bottom: 100px;
+    }
+
+    .project-card {
+      position: relative;
+
+      padding: 34px;
+
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+
+      background: white;
+
+      transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+
+      border-color: rgba(142,23,48,0.2);
+
+      box-shadow: var(--shadow-hover);
+    }
+
+    .tag {
+      display: inline-flex;
+
+      align-items: center;
+
+      padding: 6px 11px;
+
+      margin-bottom: 20px;
+
+      border-radius: 100px;
+
+      background: var(--red-light);
+      color: var(--red);
+
+      font-size: 0.7rem;
+      font-weight: 800;
+
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .project-card h3 {
+      margin: 0 0 18px;
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size: 1.55rem;
+      line-height: 1.25;
+    }
+
+    .project-card p {
+      margin: 0;
+
+      color: var(--text-soft);
+
+      font-size: 0.94rem;
+    }
+
+    .research-questions {
+      padding-left: 20px;
+
+      margin: 20px 0;
+
+      color: #494949;
+    }
+
+    .research-questions li {
+      margin-bottom: 9px;
+    }
+
+    .project-number {
+      position: absolute;
+
+      right: 25px;
+      top: 20px;
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      color: rgba(142,23,48,0.08);
+
+      font-size: 4rem;
+      font-weight: 800;
+
+      line-height: 1;
+    }
+
+
+    /* =========================================================
+       WORKFLOW
+    ========================================================= */
+
+    .workflow-section {
+      margin: 0 0 100px;
+
+      padding: 65px 55px;
+
+      border-radius: var(--radius-large);
+
+      background:
+        linear-gradient(
+          135deg,
+          #701125,
+          #991c3a
+        );
+
+      color: white;
+
+      overflow: hidden;
+
+      position: relative;
+    }
+
+    .workflow-section::after {
+      content: "";
+
+      position: absolute;
+
+      width: 320px;
+      height: 320px;
+
+      border-radius: 50%;
+
+      top: -120px;
+      right: -120px;
+
+      background: rgba(255,255,255,0.06);
+    }
+
+    .workflow-heading {
+      max-width: 760px;
+
+      margin-bottom: 45px;
+    }
+
+    .workflow-heading .section-tag {
+      color: #f2cbd5;
+    }
+
+    .workflow-heading h2 {
+      margin: 0 0 14px;
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size: clamp(2rem, 4vw, 3.2rem);
+    }
+
+    .workflow-heading p {
+      margin: 0;
+
+      opacity: 0.82;
+    }
+
+    .workflow-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(4, 1fr);
+
+      gap: 16px;
+
+      position: relative;
+      z-index: 1;
+    }
+
+    .workflow-step {
+      padding: 25px;
+
+      border-radius: 18px;
+
+      background: rgba(255,255,255,0.09);
+
+      border:
+        1px solid rgba(255,255,255,0.13);
+
+      backdrop-filter: blur(5px);
+    }
+
+    .workflow-number {
+      display: block;
+
+      margin-bottom: 35px;
+
+      font-size: 0.78rem;
+      font-weight: 800;
+
+      letter-spacing: 0.15em;
+
+      opacity: 0.65;
+    }
+
+    .workflow-icon {
+      font-size: 1.8rem;
+
+      margin-bottom: 10px;
+    }
+
+    .workflow-step strong {
+      display: block;
+
+      margin-bottom: 8px;
+
+      font-size: 1.05rem;
+    }
+
+    .workflow-step span {
+      display: block;
+
+      font-size: 0.87rem;
+
+      opacity: 0.75;
+    }
+
+
+    /* =========================================================
+       TWO COLUMNS
+    ========================================================= */
+
+    .two-cols {
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+      gap: 28px;
+
+      align-items: start;
+    }
+
+    .panel {
+      padding: 42px;
+
+      border: 1px solid var(--border);
+
+      border-radius: var(--radius-large);
+
+      background: white;
+
+      box-shadow:
+        0 10px 35px rgba(0,0,0,0.045);
+    }
+
+    .panel > p {
+      color: var(--text-soft);
+
+      margin-bottom: 28px;
+    }
+
+
+    /* =========================================================
+       CLINICAL COLLABORATIONS
+    ========================================================= */
+
+    .collab-list {
+      display: grid;
+
+      gap: 12px;
+    }
+
+    .collab-item {
+      padding: 18px 20px;
+
+      border-radius: 14px;
+
+      border: 1px solid #ececec;
+
+      background: #fafafa;
+
+      transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+    }
+
+    .collab-item:hover {
+      background: var(--red-light);
+
+      border-color: rgba(142,23,48,0.16);
+
+      transform: translateX(4px);
+    }
+
+    .collab-item strong {
+      display: block;
+
+      margin-bottom: 3px;
+
+      font-size: 0.92rem;
+    }
+
+    .collab-item span {
+      color: var(--text-soft);
+
+      font-size: 0.82rem;
+    }
+
+
+    /* =========================================================
+       APPROACH GRID
+    ========================================================= */
+
+    .approach-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
+      gap: 14px;
+    }
+
+    .approach {
+      min-height: 190px;
+
+      padding: 23px;
+
+      border-radius: 17px;
+
+      background: #fafafa;
+
+      border: 1px solid #eeeeee;
+
+      display: flex;
+      flex-direction: column;
+
+      transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+    }
+
+    .approach:hover {
+      transform: translateY(-4px);
+
+      background: white;
+
+      box-shadow:
+        0 12px 25px rgba(0,0,0,0.07);
+    }
+
+    .approach .icon {
+      width: 47px;
+      height: 47px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      margin-bottom: 18px;
+
+      border-radius: 12px;
+
+      background: var(--red-light);
+
+      font-size: 1.4rem;
+    }
+
+    .approach strong {
+      margin-bottom: 8px;
+
+      font-size: 0.96rem;
+
+      line-height: 1.4;
+    }
+
+    .approach span {
+      color: var(--text-soft);
+
+      font-size: 0.82rem;
+
+      line-height: 1.55;
+    }
+
+
+    /* =========================================================
+       MARQUEE
+    ========================================================= */
+
+    .marquee {
+      overflow: hidden;
+
+      padding: 19px 0;
+
+      background: #161616;
+
+      color: white;
+
+      white-space: nowrap;
+    }
+
+    .marquee-content {
+      display: inline-flex;
+
+      gap: 45px;
+
+      min-width: max-content;
+
+      animation:
+        marquee 32s linear infinite;
+    }
+
+    .marquee-content span {
+      font-size: 0.88rem;
+
+      opacity: 0.87;
+    }
+
+    @keyframes marquee {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+
+    /* =========================================================
+       FOOTER BAND
+    ========================================================= */
+
+    .footer-band {
+      padding: 75px 0;
+
+      background: #86162f;
+
+      color: white;
+    }
+
+    .fb-wrap {
+      display: grid;
+
+      grid-template-columns:
+        1.6fr 0.8fr;
+
+      gap: 70px;
+
+      align-items: center;
+    }
+
+    .fb-brand {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 25px;
+
+      align-items: center;
+
+      margin-bottom: 28px;
+    }
+
+    .fb-brand img {
+      max-width: 145px;
+
+      object-fit: contain;
+    }
+
+    .logo-white {
+      filter: brightness(0) invert(1);
+    }
+
+    .fb-links {
+      list-style: none;
+
+      padding: 0;
+      margin: 0 0 18px;
+    }
+
+    .fb-links a {
+      font-weight: 700;
+    }
+
+    .fb-address {
+      display: flex;
+      flex-direction: column;
+
+      font-size: 0.88rem;
+
+      opacity: 0.85;
+    }
+
+    .fb-card {
+      padding: 32px;
+
+      border-radius: 20px;
+
+      background: rgba(255,255,255,0.09);
+
+      border:
+        1px solid rgba(255,255,255,0.15);
+    }
+
+    .fb-card-title {
+      margin-top: 0;
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size: 1.7rem;
+    }
+
+    .fb-card-text {
+      opacity: 0.82;
+
+      font-size: 0.9rem;
+    }
+
+    .fb-card-btn {
+      display: inline-block;
+
+      margin-top: 12px;
+
+      padding: 11px 20px;
+
+      border-radius: 100px;
+
+      background: white;
+
+      color: var(--red);
+
+      font-weight: 700;
+
+      font-size: 0.85rem;
+    }
+
+    .fb-social {
+      display: flex;
+
+      gap: 12px;
+
+      margin-top: 20px;
+    }
+
+    .si {
+      width: 39px;
+      height: 39px;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 50%;
+
+      background: rgba(255,255,255,0.1);
+
+      transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .si:hover {
+      background: white;
+
+      transform: translateY(-2px);
+    }
+
+    .si svg {
+      width: 17px;
+      height: 17px;
+
+      fill: white;
+    }
+
+    .si:hover svg {
+      fill: var(--red);
+    }
+
+
+    /* =========================================================
+       FOOTER
+    ========================================================= */
+
+    .site-footer {
+      padding: 20px 0;
+
+      background: #111;
+
+      color: #aaa;
+
+      font-size: 0.76rem;
+    }
+
+    .site-footer .container {
+      display: flex;
+
+      justify-content: space-between;
+
+      gap: 20px;
+    }
+
+
+    /* =========================================================
+       RESPONSIVE
+    ========================================================= */
+
+    @media (max-width: 1050px) {
+
+      .project-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .workflow-grid {
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+
+      .two-cols {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-rows {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hero-desc {
+        grid-column: 1 / -1;
+      }
+    }
+
+
+    @media (max-width: 800px) {
+
+      .container-two-cols {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+      }
+
+      .intro-nav {
+        position: static;
+
+        display: flex;
+
+        flex-direction: row;
+
+        overflow-x: auto;
+
+        padding-bottom: 10px;
+      }
+
+      .intro-nav a {
+        white-space: nowrap;
+      }
+
+      .hero-container {
+        padding-top: 85px;
+      }
+
+      .hero-rows {
+        grid-template-columns: 1fr;
+      }
+
+      .workflow-section {
+        padding: 45px 25px;
+      }
+
+      .workflow-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .approach-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .fb-wrap {
+        grid-template-columns: 1fr;
+      }
+    }
+
+
+    @media (max-width: 560px) {
+
+      .fieldwork-section {
+        padding-top: 60px;
+      }
+
+      .project-card,
+      .panel {
+        padding: 27px 23px;
+      }
+
+      .workflow-grid,
+      .approach-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-rows {
+        gap: 22px;
+      }
+
+      .fb-brand img {
+        max-width: 110px;
+      }
+
+      .site-footer .container {
+        flex-direction: column;
+
+        gap: 3px;
+      }
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- =======================================================
+       HERO
+  ======================================================== -->
+
+  <section class="hero-colored">
+
+    <video
+      autoplay
+      muted
+      loop
+      playsinline
+      class="hero-bg-video"
+      aria-hidden="true"
+    >
+      <source
+        src="assets/video/red-blood-cells-lld.mp4"
+        type="video/mp4"
+      >
+    </video>
+
+    <div class="container hero-container">
+
+      <h1 class="hero-title">
+        BaHSic Lab
+      </h1>
+
+      <p class="hero-acronym">
+        <strong>BaHSic</strong> —
+        <em>
+          Blood group Antigens, Hematopoiesis and
+          Sickle cell disease
+        </em>
+      </p>
+
+      <hr class="hero-rule">
+
+      <div
+        class="hero-rows"
+        role="group"
+        aria-label="Laboratory presentation and contact information"
+      >
+
+        <p class="hero-desc">
+          Hematopoiesis & Translational Research:
+          blood cell biology, multi-omic approaches,
+          and translational studies.
+        </p>
+
+        <p class="hero-phone">
+
+          <span class="hero-label">
+            Contact
+          </span>
+
+          <span class="hero-value">
+            (+33) 1 81 72 43 14
+          </span>
+
+          <span class="hero-value">
+            sara.bencheikh@inserm.fr
+          </span>
+
+        </p>
+
+        <address class="hero-address">
+
+          <span class="hero-label">
+            Location
+          </span>
+
+          <span class="hero-value">
+            Hôpital Necker – Enfants Malades
+          </span>
+
+          <span class="hero-value">
+            149 rue de Sèvres
+          </span>
+
+          <span class="hero-value">
+            75015 Paris
+          </span>
+
+        </address>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =======================================================
+       INTRO
+  ======================================================== -->
+
+  <section
+    class="intro-section"
+    aria-labelledby="fieldwork-title"
+  >
+
+    <div class="container-two-cols">
+
+      <aside
+        class="intro-left"
+        aria-label="Section navigation"
+      >
+
+        <nav class="intro-nav">
+
+          <a href="index.html">
+            Home
+          </a>
+
+          <a href="team.html">
+            Team
+          </a>
+
+          <a
+            href="projects.html"
+            aria-current="page"
+          >
+            Field Work
+          </a>
+
+          <a href="plateforms.html">
+            Methods & Technologies
+          </a>
+
+          <a href="publications.html">
+            Publications
+          </a>
+
+          <a href="collabs.html">
+            Collaborations
+          </a>
+
+          <a href="news.html">
+            News
+          </a>
+
+          <a href="contact.html">
+            Contact
+          </a>
+
+        </nav>
+
+      </aside>
+
+
+      <div class="intro-right">
+
+        <span class="section-tag">
+          Research
+        </span>
+
+        <h2
+          id="fieldwork-title"
+          class="intro-title"
+        >
+          Our Field Work
+        </h2>
+
+        <p class="intro-text">
+          Discover how BAHSic-U1134 connects clinical expertise,
+          experimental biology and advanced omics technologies
+          to address key challenges in hematology and
+          transfusion medicine.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =======================================================
+       FIELD WORK
+  ======================================================== -->
+
+  <section class="fieldwork-section">
+
+    <div class="container">
+
+
+      <!-- RESEARCH OVERVIEW IMAGE -->
+
+      <figure class="fieldwork-figure">
+
+        <img
+          src="assets/img/field_work_overview.png"
+          alt="Overview of BAHSic research axes"
+          class="fieldwork-main-img"
+        >
+
+      </figure>
+
+
+
+      <!-- ONGOING PROJECTS INTRO -->
+
+      <div class="intro-card">
+
+        <span class="section-tag">
+          Research Programs
+        </span>
+
+        <h2>
+          Ongoing Projects
+        </h2>
+
+        <p>
+          Anemia is a major global health challenge caused by
+          a wide range of disorders and associated with reduced
+          quality of life, increased morbidity and higher mortality.
+          Our team conducts fundamental and translational research
+          to better understand red blood cell biology in health and
+          disease, with the ultimate goal of developing innovative
+          diagnostic, therapeutic and transfusion strategies.
+        </p>
+
+      </div>
+
+
+
+      <!-- ===================================================
+           PROJECTS
+      ==================================================== -->
+
+      <section class="project-grid">
+
+
+        <!-- PROJECT 1 -->
+
+        <article class="project-card">
+
+          <span class="project-number">
+            01
+          </span>
+
+          <span class="tag">
+            Ongoing
+          </span>
+
+          <h3>
+            Erythropoiesis and
+            Anemia of Inflammation
+          </h3>
+
+          <p>
+            A major focus of our laboratory is to elucidate
+            the molecular and cellular mechanisms regulating
+            hematopoiesis and erythropoiesis under physiological
+            and pathological conditions.
+          </p>
+
+          <p style="margin-top:15px;">
+            We investigate how aging, inflammation and sickle
+            cell disease alter hematopoietic homeostasis,
+            with particular emphasis on interactions between
+            hematopoietic cells and their microenvironment.
+          </p>
+
+          <ul class="research-questions">
+
+            <li>
+              How does inflammation impair hematopoiesis
+              and erythropoiesis?
+            </li>
+
+            <li>
+              Which metabolic and cytokine signaling pathways
+              drive these alterations?
+            </li>
+
+            <li>
+              Which transcriptional and epigenetic programs
+              regulate hematopoietic dysfunction?
+            </li>
+
+          </ul>
+
+          <p>
+            By integrating molecular, cellular and translational
+            approaches, we aim to identify mechanisms underlying
+            ineffective erythropoiesis and uncover novel
+            therapeutic targets for inflammatory anemia and
+            sickle cell disease.
+          </p>
+
+        </article>
+
+
+
+        <!-- PROJECT 2 -->
+
+        <article class="project-card">
+
+          <span class="project-number">
+            02
+          </span>
+
+          <span class="tag">
+            Ongoing
+          </span>
+
+          <h3>
+            Sickle Cell Disease
+            Pathophysiology
+          </h3>
+
+          <p>
+            We investigate the cellular and molecular mechanisms
+            responsible for both acute and chronic complications
+            of sickle cell disease.
+          </p>
+
+          <p style="margin-top:15px;">
+            A major focus of our work is understanding how chronic
+            inflammation contributes to vaso-occlusion,
+            endothelial activation, splenic dysfunction and
+            progressive organ damage.
+          </p>
+
+          <p style="margin-top:15px;">
+            Using multidisciplinary approaches combining
+            experimental models, patient-derived samples and
+            translational research, we seek to identify novel
+            biomarkers and therapeutic targets to improve
+            patient care and long-term clinical outcomes.
+          </p>
+
+        </article>
+
+
+
+        <!-- PROJECT 3 -->
+
+        <article class="project-card">
+
+          <span class="project-number">
+            03
+          </span>
+
+          <span class="tag">
+            Emerging
+          </span>
+
+          <h3>
+            Blood Group Antigens
+            and Transfusion Medicine
+          </h3>
+
+          <p>
+            Our laboratory investigates the biology,
+            genetic diversity and physiological functions
+            of blood group antigens.
+          </p>
+
+          <p style="margin-top:15px;">
+            We are particularly interested in understanding
+            how blood group polymorphisms influence
+            alloimmunization, transfusion compatibility and
+            transfusion safety, especially in patients with
+            rare blood phenotypes and those requiring chronic
+            transfusion support.
+          </p>
+
+          <p style="margin-top:15px;">
+            Our objective is to advance precision transfusion
+            medicine and reduce transfusion-related complications
+            through a better understanding of blood group biology.
+          </p>
+
+        </article>
+
+      </section>
+
+
+
+      <!-- ===================================================
+           FROM PATIENT TO MECHANISM
+      ==================================================== -->
+
+      <section class="workflow-section">
+
+        <div class="workflow-heading">
+
+          <span class="section-tag">
+            Our Research Strategy
+          </span>
+
+          <h2>
+            From patient to mechanism
+          </h2>
+
+          <p>
+            Our research integrates clinical material,
+            experimental models and high-dimensional technologies
+            to uncover mechanisms of blood cell biology and disease.
+          </p>
+
+        </div>
+
+
+        <div class="workflow-grid">
+
+
+          <div class="workflow-step">
+
+            <span class="workflow-number">
+              01
+            </span>
+
+            <div class="workflow-icon">
+              🩸
+            </div>
+
+            <strong>
+              Clinical Samples
+            </strong>
+
+            <span>
+              Patient cohorts, biological collections
+              and primary human samples.
+            </span>
+
+          </div>
+
+
+
+          <div class="workflow-step">
+
+            <span class="workflow-number">
+              02
+            </span>
+
+            <div class="workflow-icon">
+              🧫
+            </div>
+
+            <strong>
+              Cellular Models
+            </strong>
+
+            <span>
+              Primary cells, stem cells,
+              ex vivo and functional models.
+            </span>
+
+          </div>
+
+
+
+          <div class="workflow-step">
+
+            <span class="workflow-number">
+              03
+            </span>
+
+            <div class="workflow-icon">
+              🧬
+            </div>
+
+            <strong>
+              Deep Profiling
+            </strong>
+
+            <span>
+              Transcriptomics, single-cell,
+              proteomics and epigenomics.
+            </span>
+
+          </div>
+
+
+
+          <div class="workflow-step">
+
+            <span class="workflow-number">
+              04
+            </span>
+
+            <div class="workflow-icon">
+              🔬
+            </div>
+
+            <strong>
+              Functional Validation
+            </strong>
+
+            <span>
+              Imaging, cytometry, molecular assays
+              and genome editing.
+            </span>
+
+          </div>
+
+
+        </div>
+
+      </section>
+
+
+
+      <!-- ===================================================
+           COLLABORATIONS + APPROACHES
+      ==================================================== -->
+
+      <section class="two-cols">
+
+
+        <!-- CLINICAL COLLABORATIONS -->
+
+        <div class="panel">
+
+          <span class="section-tag">
+            Network
+          </span>
+
+          <h2 class="section-title">
+            Clinical Collaborations
+          </h2>
+
+          <p>
+            We work closely with clinicians, hospitals
+            and translational research teams to bridge
+            fundamental biology and patient-oriented research.
+          </p>
+
+
+          <div class="collab-list">
+
+
+            <div class="collab-item">
+
+              <strong>
+                CNRGS
+              </strong>
+
+              <span>
+                National Reference Center for Blood Groups
+              </span>
+
+            </div>
+
+
+
+            <div class="collab-item">
+
+              <strong>
+                Robert Debré Hospital
+              </strong>
+
+              <span>
+                Sickle Cell Disease Reference Center —
+                Paris, France
+              </span>
+
+            </div>
+
+
+
+            <div class="collab-item">
+
+              <strong>
+                Pediatric Hospital Network
+              </strong>
+
+              <span>
+                Clinical and translational collaborations
+                in pediatric hematology
+              </span>
+
+            </div>
+
+
+
+            <div class="collab-item">
+
+              <strong>
+                University Hospital of Pointe-à-Pitre
+              </strong>
+
+              <span>
+                Sickle Cell Disease Reference Center —
+                Guadeloupe, France
+              </span>
+
+            </div>
+
+
+          </div>
+
+        </div>
+
+
+
+        <!-- RESEARCH APPROACHES -->
+
+        <div class="panel">
+
+          <span class="section-tag">
+            Expertise
+          </span>
+
+          <h2 class="section-title">
+            Research Approaches
+          </h2>
+
+          <p>
+            BAHSic-U1134 combines patient-derived samples,
+            advanced cellular models, state-of-the-art technologies
+            and translational research to investigate hematopoiesis
+            and blood disorders.
+          </p>
+
+
+          <div class="approach-grid">
+
+
+            <div class="approach">
+
+              <div class="icon">
+                🩸
+              </div>
+
+              <strong>
+                Clinical & Translational Research
+              </strong>
+
+              <span>
+                Clinical cohorts, patient-derived samples,
+                human primary cells and ex vivo models.
+              </span>
+
+            </div>
+
+
+
+            <div class="approach">
+
+              <div class="icon">
+                🧫
+              </div>
+
+              <strong>
+                Stem Cell & Cellular Biology
+              </strong>
+
+              <span>
+                Stem cell biology, primary cell culture,
+                molecular biology and functional assays.
+              </span>
+
+            </div>
+
+
+
+            <div class="approach">
+
+              <div class="icon">
+                🔬
+              </div>
+
+              <strong>
+                Advanced Phenotyping & Imaging
+              </strong>
+
+              <span>
+                Flow cytometry, cell sorting,
+                imaging and confocal microscopy.
+              </span>
+
+            </div>
+
+
+
+            <div class="approach">
+
+              <div class="icon">
+                🧬
+              </div>
+
+              <strong>
+                Functional Genomics & Multi-omics
+              </strong>
+
+              <span>
+                Transcriptomics, proteomics,
+                epigenomics and CRISPR/Cas9 gene editing.
+              </span>
+
+            </div>
+
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =======================================================
+       SCIENTIFIC MARQUEE
+  ======================================================== -->
+
+  <section
+    class="marquee"
+    aria-label="BAHSic research themes"
+  >
+
+    <div class="marquee-content">
+
+      <span>🩸 Red blood cells</span>
+      <span>🌱 Hematopoiesis</span>
+      <span>🔥 Inflammation</span>
+      <span>🧬 Blood group antigens</span>
+      <span>🧫 Sickle Cell Disease</span>
+      <span>🛡️ Spleen biology</span>
+      <span>🩸 Alloimmunization</span>
+      <span>🧪 Immunohematology</span>
+      <span>🔬 Single-cell technologies</span>
+      <span>🧬 Functional genomics</span>
+
+      <!-- Duplication for smooth infinite animation -->
+
+      <span>🩸 Red blood cells</span>
+      <span>🌱 Hematopoiesis</span>
+      <span>🔥 Inflammation</span>
+      <span>🧬 Blood group antigens</span>
+      <span>🧫 Sickle Cell Disease</span>
+      <span>🛡️ Spleen biology</span>
+      <span>🩸 Alloimmunization</span>
+      <span>🧪 Immunohematology</span>
+      <span>🔬 Single-cell technologies</span>
+      <span>🧬 Functional genomics</span>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =======================================================
+       FOOTER BAND
+  ======================================================== -->
+
+  <section
+    class="footer-band"
+    aria-label="Useful links and social networks"
+  >
+
+    <div class="container fb-wrap">
+
+
+      <div class="fb-left">
+
+        <div class="fb-brand">
+
+          <img
+            src="assets/img/Inserm_rvb_noir.png"
+            alt="Inserm"
+            class="logo-white"
+            style="height:70px;"
+          >
+
+          <img
+            src="assets/img/bahsic-logo.png"
+            alt="BAHSic"
+            class="logo-white"
+            style="height:70px;"
+          >
+
+          <img
+            src="assets/img/universite-paris-cite.png"
+            alt="Université Paris Cité"
+            style="height:45px;"
+          >
+
+          <img
+            src="assets/img/Logo_EFS.png"
+            alt="EFS"
+            style="height:70px;"
+          >
+
+          <img
+            src="assets/img/u_antilles.png"
+            alt="Université des Antilles"
+            style="height:70px;"
+          >
+
+        </div>
+
+
+        <ul class="fb-links">
+
+          <li>
+            <a href="contact.html">
+              Contact
+            </a>
+          </li>
+
+        </ul>
+
+
+        <div class="fb-address">
+
+          <span>
+            Hôpital Necker – Enfants Malades
+          </span>
+
+          <span>
+            149 rue de Sèvres
+          </span>
+
+          <span>
+            75015 Paris
+          </span>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="fb-right">
+
+        <div class="fb-card">
+
+          <h3 class="fb-card-title">
+            Stay in touch
+          </h3>
+
+          <p class="fb-card-text">
+            Follow the lab and receive updates
+            on research, publications and events.
+          </p>
+
+          <a
+            class="fb-card-btn"
+            href="news.html"
+          >
+            Discover our news →
+          </a>
+
+        </div>
+
+
+        <div
+          class="fb-social"
+          aria-label="Social networks"
+        >
+
+
+          <!-- LINKEDIN -->
+
+          <a
+            class="si"
+            href="https://www.linkedin.com/"
+            aria-label="LinkedIn"
+            target="_blank"
+            rel="noopener"
+          >
+
+            <svg
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                d="M4.98 3.5a2.5 2.5 0 1 1 0 5.001 2.5 2.5 0 0 1 0-5zM3 8.982h3.96V21H3zM9.78 8.982H13.6v1.64h.06c.53-.95 1.82-1.95 3.74-1.95 4 0 4.74 2.63 4.74 6.05V21H18.2v-4.93c0-1.18-.02-2.69-1.64-2.69-1.64 0-1.89 1.28-1.89 2.6V21H9.78z"
+              />
+            </svg>
+
+          </a>
+
+
+
+          <!-- X -->
+
+          <a
+            class="si"
+            href="https://twitter.com/"
+            aria-label="X"
+            target="_blank"
+            rel="noopener"
+          >
+
+            <svg
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                d="M18.9 2H22l-7.7 8.8L23.5 22h-6.3l-5-6.4-5.7 6.4H2.4l8.4-9.5L.7 2h6.5l4.6 5.9L18.9 2z"
+              />
+            </svg>
+
+          </a>
+
+
+
+          <!-- YOUTUBE -->
+
+          <a
+            class="si"
+            href="https://www.youtube.com/"
+            aria-label="YouTube"
+            target="_blank"
+            rel="noopener"
+          >
+
+            <svg
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19 3.5 12 3.5 12 3.5s-7 0-9.4.6A3 3 0 0 0 .5 6.2 31.2 31.2 0 0 0 0 12a31.2 31.2 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c2.4.6 9.4.6 9.4.6s7 0 9.4-.6a3 3 0 0 0 2.1-2.1c.4-1.9.5-3.8.5-5.8s0-3.9-.5-5.8zM9.6 15.5V8.6l6.2 3.5-6.2 3.4z"
+              />
+            </svg>
+
+          </a>
+
+
+
+          <!-- GITHUB -->
+
+          <a
+            class="si"
+            href="https://github.com/"
+            aria-label="GitHub"
+            target="_blank"
+            rel="noopener"
+          >
+
+            <svg
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.4-4-1.4-.6-1.3-1.4-1.7-1.4-1.7-1.1-.8.1-.8.1-.8 1.2.1 1.9 1.2 1.9 1.2 1.1 1.9 2.9 1.3 3.6 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.6-1.3-5.6-6a4.7 4.7 0 0 1 1.2-3.2 4.3 4.3 0 0 1 .1-3.1s1-.3 3.3 1.2a11.3 11.3 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2a4.3 4.3 0 0 1 .1 3.1 4.7 4.7 0 0 1 1.2 3.2c0 4.7-2.9 5.7-5.6 6 .4.3.8 1 .8 2v3c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"
+              />
+            </svg>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =======================================================
+       FOOTER
+  ======================================================== -->
+
+  <footer
+    class="site-footer"
+    role="contentinfo"
+  >
+
+    <div class="container">
+
+      <p>
+        © 2026 Inserm — BAHSic-U1134 Lab
+      </p>
+
+      <p>
+        Blood group Antigens, Hematopoiesis and
+        Sickle cell disease
+      </p>
+
+    </div>
+
+  </footer>
+
+
+</body>
+</html>

@@ -3908,3 +3908,1199 @@ grid-template-columns: minmax(0, 1fr) !important;
     max-width: 100%;
   }
 }
+
+/* ==========================================================
+   FIELD WORK PAGE
+   ========================================================== */
+
+.fieldwork-section {
+  padding: 85px 0 105px;
+  background: #ffffff;
+}
+
+
+/* ==========================================================
+   OVERVIEW IMAGE
+   ========================================================== */
+
+.fieldwork-figure {
+  margin: 0 0 85px;
+  overflow: hidden;
+
+  border: 1px solid #ece8e9;
+  border-radius: 24px;
+
+  background: #fafafa;
+
+  box-shadow:
+    0 16px 50px rgba(45, 20, 26, 0.07);
+}
+
+.fieldwork-main-img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  transition: transform 0.5s ease;
+}
+
+.fieldwork-figure:hover .fieldwork-main-img {
+  transform: scale(1.015);
+}
+
+
+/* ==========================================================
+   SECTION INTRO
+   ========================================================== */
+
+.fieldwork-intro {
+  max-width: 880px;
+
+  margin: 0 auto 60px;
+
+  text-align: center;
+}
+
+.section-eyebrow {
+  display: inline-block;
+
+  margin-bottom: 10px;
+
+  color: #971b39;
+
+  font-size: 0.72rem;
+  font-weight: 800;
+
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.fieldwork-intro h2 {
+  margin: 0 0 22px;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(2.4rem, 4vw, 3.7rem);
+
+  line-height: 1.08;
+
+  color: #222;
+}
+
+.fieldwork-intro p {
+  margin: 0;
+
+  color: #65676c;
+
+  font-size: 1.02rem;
+
+  line-height: 1.85;
+}
+
+
+/* ==========================================================
+   PROJECT CARDS
+   ========================================================== */
+
+.project-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 24px;
+
+  margin-bottom: 95px;
+}
+
+.project-card {
+  position: relative;
+
+  padding: 34px;
+
+  background: #ffffff;
+
+  border: 1px solid #eae7e8;
+  border-radius: 20px;
+
+  transition:
+    transform 0.28s ease,
+    box-shadow 0.28s ease,
+    border-color 0.28s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(151, 27, 57, 0.22);
+
+  box-shadow:
+    0 20px 45px rgba(54, 25, 32, 0.09);
+}
+
+.project-card-top {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 24px;
+}
+
+.project-status {
+  display: inline-flex;
+
+  align-items: center;
+
+  padding: 6px 11px;
+
+  border-radius: 50px;
+
+  background: #f8ecef;
+  color: #971b39;
+
+  font-size: 0.69rem;
+  font-weight: 800;
+
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.project-status.upcoming {
+  background: #f5f3ef;
+
+  color: #716651;
+}
+
+.project-number {
+  color: #d6c9cc;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.project-card h3 {
+  margin: 0 0 22px;
+
+  color: #242326;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 1.55rem;
+
+  line-height: 1.3;
+}
+
+.project-card p {
+  margin: 0 0 17px;
+
+  color: #67676c;
+
+  font-size: 0.91rem;
+
+  line-height: 1.75;
+}
+
+.project-card p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* ==========================================================
+   RESEARCH QUESTIONS
+   ========================================================== */
+
+.research-question-box {
+  margin: 24px 0;
+
+  padding: 20px 20px 15px;
+
+  border-left: 3px solid #971b39;
+
+  border-radius: 0 12px 12px 0;
+
+  background: #faf5f6;
+}
+
+.question-title {
+  display: block;
+
+  margin-bottom: 12px;
+
+  color: #971b39;
+
+  font-size: 0.72rem;
+  font-weight: 800;
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.research-question-box ul {
+  margin: 0;
+
+  padding-left: 19px;
+}
+
+.research-question-box li {
+  margin-bottom: 8px;
+
+  color: #55545a;
+
+  font-size: 0.87rem;
+
+  line-height: 1.6;
+}
+
+
+/* ==========================================================
+   RESEARCH STRATEGY
+   ========================================================== */
+
+.research-strategy {
+  position: relative;
+
+  margin-bottom: 90px;
+
+  padding: 55px;
+
+  overflow: hidden;
+
+  color: #ffffff;
+
+  border-radius: 26px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #671023 0%,
+      #8e1834 55%,
+      #a32645 100%
+    );
+}
+
+.research-strategy::before {
+  content: "";
+
+  position: absolute;
+
+  top: -120px;
+  right: -100px;
+
+  width: 330px;
+  height: 330px;
+
+  border-radius: 50%;
+
+  background: rgba(255,255,255,0.045);
+}
+
+.strategy-header {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 720px;
+
+  margin-bottom: 40px;
+}
+
+.section-eyebrow-light {
+  color: #efcbd4;
+}
+
+.strategy-header h2 {
+  margin: 0 0 15px;
+
+  color: #ffffff;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(2rem, 4vw, 3rem);
+
+  line-height: 1.15;
+}
+
+.strategy-header p {
+  margin: 0;
+
+  max-width: 680px;
+
+  color: rgba(255,255,255,0.78);
+
+  font-size: 0.95rem;
+
+  line-height: 1.75;
+}
+
+.strategy-grid {
+  position: relative;
+
+  z-index: 2;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 14px;
+}
+
+.strategy-step {
+  min-height: 210px;
+
+  padding: 23px;
+
+  border: 1px solid rgba(255,255,255,0.14);
+
+  border-radius: 16px;
+
+  background: rgba(255,255,255,0.075);
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+.strategy-step:hover {
+  transform: translateY(-4px);
+
+  background: rgba(255,255,255,0.12);
+}
+
+.strategy-number {
+  display: block;
+
+  margin-bottom: 27px;
+
+  color: rgba(255,255,255,0.5);
+
+  font-size: 0.7rem;
+  font-weight: 800;
+
+  letter-spacing: 0.15em;
+}
+
+.strategy-icon {
+  margin-bottom: 12px;
+
+  font-size: 1.7rem;
+}
+
+.strategy-step strong {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #ffffff;
+
+  font-size: 0.96rem;
+}
+
+.strategy-step > span:last-child {
+  display: block;
+
+  color: rgba(255,255,255,0.68);
+
+  font-size: 0.8rem;
+
+  line-height: 1.6;
+}
+
+
+/* ==========================================================
+   BOTTOM PANELS
+   ========================================================== */
+
+.fieldwork-two-cols {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 26px;
+}
+
+.fieldwork-panel {
+  padding: 38px;
+
+  border: 1px solid #eae7e8;
+
+  border-radius: 22px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 10px 35px rgba(40, 18, 24, 0.045);
+}
+
+.fieldwork-panel .section-title {
+  margin: 0 0 15px;
+
+  color: #242326;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(1.8rem, 2.6vw, 2.45rem);
+
+  line-height: 1.2;
+}
+
+.panel-intro {
+  margin: 0 0 27px;
+
+  color: #69686d;
+
+  font-size: 0.92rem;
+
+  line-height: 1.75;
+}
+
+
+/* ==========================================================
+   COLLABORATIONS
+   ========================================================== */
+
+.collaboration-list {
+  display: grid;
+
+  gap: 11px;
+}
+
+.collaboration-item {
+  display: grid;
+
+  grid-template-columns: 38px 1fr;
+
+  gap: 14px;
+
+  align-items: start;
+
+  padding: 17px;
+
+  border: 1px solid #ededed;
+
+  border-radius: 13px;
+
+  background: #fafafa;
+
+  transition:
+    transform 0.23s ease,
+    background 0.23s ease,
+    border-color 0.23s ease;
+}
+
+.collaboration-item:hover {
+  transform: translateX(4px);
+
+  border-color: #ead0d6;
+
+  background: #fdf7f8;
+}
+
+.collaboration-icon {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  background: #f5e8eb;
+
+  color: #971b39;
+
+  font-size: 0.68rem;
+  font-weight: 800;
+}
+
+.collaboration-item strong {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: #343337;
+
+  font-size: 0.9rem;
+}
+
+.collaboration-item div > span {
+  display: block;
+
+  color: #747379;
+
+  font-size: 0.78rem;
+
+  line-height: 1.5;
+}
+
+
+/* ==========================================================
+   RESEARCH APPROACHES
+   ========================================================== */
+
+.approach-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 12px;
+}
+
+.approach-card {
+  min-height: 174px;
+
+  padding: 20px;
+
+  border: 1px solid #ecebec;
+
+  border-radius: 15px;
+
+  background: #fafafa;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.approach-card:hover {
+  transform: translateY(-4px);
+
+  background: #ffffff;
+
+  box-shadow:
+    0 12px 26px rgba(44, 20, 27, 0.07);
+}
+
+.approach-icon {
+  width: 43px;
+  height: 43px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 16px;
+
+  border-radius: 11px;
+
+  background: #f5e8eb;
+
+  font-size: 1.25rem;
+}
+
+.approach-card strong {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #37363a;
+
+  font-size: 0.88rem;
+
+  line-height: 1.4;
+}
+
+.approach-card span {
+  display: block;
+
+  color: #76757a;
+
+  font-size: 0.76rem;
+
+  line-height: 1.55;
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+
+@media (max-width: 1100px) {
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .strategy-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+@media (max-width: 850px) {
+
+  .fieldwork-section {
+    padding: 60px 0 80px;
+  }
+
+  .fieldwork-two-cols {
+    grid-template-columns: 1fr;
+  }
+
+  .fieldwork-figure {
+    margin-bottom: 60px;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .fieldwork-intro {
+    text-align: left;
+  }
+
+  .project-card {
+    padding: 26px 22px;
+  }
+
+  .research-strategy {
+    padding: 38px 23px;
+  }
+
+  .strategy-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .fieldwork-panel {
+    padding: 28px 22px;
+  }
+
+  .approach-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+/* ==========================================================
+   COLLABORATIVE NETWORK
+   ========================================================== */
+
+.collab-section {
+  padding: 95px 0 110px;
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #fbf8f9 100%
+    );
+}
+
+
+/* ===== Heading ===== */
+
+.collab-heading {
+  max-width: 780px;
+  margin: 0 auto 65px;
+  text-align: center;
+}
+
+.collab-heading h2 {
+  margin: 0 0 20px;
+
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.08;
+
+  color: #242124;
+}
+
+.collab-heading p {
+  margin: 0;
+
+  color: #6d686c;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+
+/* ==========================================================
+   NETWORK LAYOUT
+   ========================================================== */
+
+.network-layout {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.2fr)
+    minmax(260px, 0.65fr)
+    minmax(0, 1.2fr);
+
+  grid-template-areas:
+    "france center europe"
+    "france center america";
+
+  gap: 24px;
+
+  align-items: stretch;
+}
+
+
+/* Decorative lines */
+
+.network-layout::before,
+.network-layout::after {
+  content: "";
+
+  position: absolute;
+
+  top: 50%;
+
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      #d8c4c9,
+      transparent
+    );
+
+  z-index: 0;
+}
+
+.network-layout::before {
+  left: 28%;
+  right: 50%;
+}
+
+.network-layout::after {
+  left: 50%;
+  right: 28%;
+}
+
+
+/* ==========================================================
+   CENTER
+   ========================================================== */
+
+.network-center {
+  grid-area: center;
+
+  position: relative;
+  z-index: 2;
+
+  min-height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 45px 25px;
+
+  border-radius: 30px;
+
+  text-align: center;
+
+  color: #ffffff;
+
+  background:
+    radial-gradient(
+      circle at 30% 20%,
+      #a42a47,
+      #7b142c 58%,
+      #5f0d20 100%
+    );
+
+  box-shadow:
+    0 22px 55px rgba(93, 14, 35, 0.24);
+}
+
+.network-center::before {
+  content: "";
+
+  position: absolute;
+
+  width: 130px;
+  height: 130px;
+
+  border-radius: 50%;
+
+  border:
+    1px solid rgba(255,255,255,0.13);
+}
+
+.network-center::after {
+  content: "";
+
+  position: absolute;
+
+  width: 185px;
+  height: 185px;
+
+  border-radius: 50%;
+
+  border:
+    1px solid rgba(255,255,255,0.07);
+}
+
+.center-small {
+  position: relative;
+  z-index: 2;
+
+  margin-bottom: 12px;
+
+  font-size: 0.65rem;
+  font-weight: 700;
+
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+
+  opacity: 0.7;
+}
+
+.network-center strong {
+  position: relative;
+  z-index: 2;
+
+  font-family: "Playfair Display", serif;
+  font-size: 2.7rem;
+
+  line-height: 1;
+}
+
+.network-center > span:last-child {
+  position: relative;
+  z-index: 2;
+
+  margin-top: 8px;
+
+  font-size: 0.9rem;
+  letter-spacing: 0.12em;
+
+  opacity: 0.78;
+}
+
+
+/* ==========================================================
+   GROUPS
+   ========================================================== */
+
+.network-group {
+  position: relative;
+  z-index: 1;
+
+  padding: 32px;
+
+  border: 1px solid #e9e4e6;
+  border-radius: 23px;
+
+  background: rgba(255,255,255,0.94);
+
+  box-shadow:
+    0 12px 36px rgba(54, 27, 34, 0.055);
+
+  transition:
+    transform 0.28s ease,
+    box-shadow 0.28s ease,
+    border-color 0.28s ease;
+}
+
+.network-group:hover {
+  transform: translateY(-5px);
+
+  border-color: #ddc8ce;
+
+  box-shadow:
+    0 20px 45px rgba(54, 27, 34, 0.09);
+}
+
+
+.network-france {
+  grid-area: france;
+}
+
+.network-europe {
+  grid-area: europe;
+}
+
+.network-america {
+  grid-area: america;
+}
+
+
+/* ==========================================================
+   GROUP HEADERS
+   ========================================================== */
+
+.network-group-header {
+  display: flex;
+
+  gap: 15px;
+
+  align-items: flex-start;
+
+  margin-bottom: 25px;
+}
+
+.network-number {
+  width: 39px;
+  height: 39px;
+
+  flex: 0 0 39px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: #f5e8eb;
+
+  color: #961b39;
+
+  font-size: 0.7rem;
+  font-weight: 800;
+}
+
+.network-region {
+  display: block;
+
+  margin-bottom: 2px;
+
+  color: #9b1d3c;
+
+  font-size: 0.66rem;
+  font-weight: 800;
+
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.network-group h3 {
+  margin: 0;
+
+  color: #2e2a2d;
+
+  font-family: "Playfair Display", serif;
+  font-size: 1.55rem;
+
+  line-height: 1.2;
+}
+
+
+/* ==========================================================
+   NATIONAL PARTNERS
+   ========================================================== */
+
+.network-partners {
+  display: grid;
+  gap: 9px;
+}
+
+.network-partner {
+  padding: 15px 17px;
+
+  border-radius: 12px;
+
+  border: 1px solid #eeeeee;
+
+  background: #fafafa;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.network-partner:hover {
+  transform: translateX(4px);
+
+  border-color: #ecd7dc;
+
+  background: #fdf7f8;
+}
+
+.network-partner strong {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: #373236;
+
+  font-size: 0.86rem;
+}
+
+.network-partner span {
+  display: block;
+
+  color: #777176;
+
+  font-size: 0.73rem;
+
+  line-height: 1.45;
+}
+
+
+/* ==========================================================
+   EUROPE
+   ========================================================== */
+
+.network-description {
+  margin: 0 0 20px;
+
+  color: #716d70;
+
+  font-size: 0.85rem;
+
+  line-height: 1.7;
+}
+
+.network-placeholder {
+  padding: 20px;
+
+  border-radius: 14px;
+
+  border: 1px dashed #d9c8cd;
+
+  background: #fcf9fa;
+}
+
+.network-placeholder span {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #5c5357;
+
+  font-weight: 700;
+}
+
+.network-placeholder small {
+  color: #8a8286;
+
+  font-size: 0.74rem;
+}
+
+
+/* ==========================================================
+   COUNTRIES
+   ========================================================== */
+
+.country-grid {
+  display: grid;
+  gap: 11px;
+}
+
+.country-card {
+  display: flex;
+
+  gap: 13px;
+
+  align-items: center;
+
+  padding: 16px;
+
+  border-radius: 13px;
+
+  border: 1px solid #ededed;
+
+  background: #fafafa;
+}
+
+.country-code {
+  width: 43px;
+  height: 43px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 43px;
+
+  border-radius: 50%;
+
+  background: #8e1835;
+
+  color: #ffffff;
+
+  font-size: 0.68rem;
+  font-weight: 800;
+
+  letter-spacing: 0.07em;
+}
+
+.country-card strong {
+  display: block;
+
+  margin-bottom: 2px;
+
+  color: #393438;
+
+  font-size: 0.85rem;
+}
+
+.country-card div span {
+  display: block;
+
+  color: #7b7579;
+
+  font-size: 0.73rem;
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+
+@media (max-width: 1000px) {
+
+  .network-layout {
+    grid-template-columns: 1fr 1fr;
+
+    grid-template-areas:
+      "center center"
+      "france europe"
+      "france america";
+  }
+
+  .network-center {
+    min-height: 230px;
+  }
+
+  .network-layout::before,
+  .network-layout::after {
+    display: none;
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  .collab-section {
+    padding: 70px 0 80px;
+  }
+
+  .collab-heading {
+    text-align: left;
+  }
+
+  .network-layout {
+    grid-template-columns: 1fr;
+
+    grid-template-areas:
+      "center"
+      "france"
+      "europe"
+      "america";
+  }
+
+  .network-group {
+    padding: 25px 22px;
+  }
+
+}
